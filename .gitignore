@@ -1,2 +1,9 @@
 /nbproject/private/
 /ProjectEE-war/nbproject/private/
+/ProjectEE-ejb/nbproject/private/
+/ProjectEE-ejb/build/
+/ProjectEE-ejb/dist/
+/ProjectEE-war/build/
+/ProjectEE-war/dist/
+/dist/
+/build/
