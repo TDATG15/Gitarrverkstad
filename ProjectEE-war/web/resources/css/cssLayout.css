@@ -7,11 +7,19 @@
     margin: 0px 0px 0px 0px;
 }
 
-.information {
-	position: absolute;
-	right: 5px;
-	
+.meny {
+	/*right: 5px;*/
+	/*text-align: right;*/
+	overflow: hidden;
 }
+#hem {
+	width: 50px;
+	float: right;
+}
+#information {
+	float: right;
+}
+
 
 #top {
     position: relative;
