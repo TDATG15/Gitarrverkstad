@@ -14,8 +14,15 @@
         <div id="icon">
 			<ui:insert name="icon">Icon Andersgitarr verkstad</ui:insert>
         </div>
+		
         <div id="top">
-            <ui:insert name="top">Hem</ui:insert>
+			<h:form>
+				<h:link value="Hem" outcome="index.xhtml"/>
+				<div class="information">
+			<h:link value="Information" outcome="info.xhtml"/>
+		</div>
+			</h:form>
+            <!-- <ui:insert name="top">Hem</ui:insert> -->
         </div>
         <div>
 			<div id="left">
@@ -30,6 +37,7 @@
                 </div>
             </div>
         </div>  
+		
     </h:body>
 </html>
 
