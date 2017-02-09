@@ -1,10 +1,37 @@
-#icon {
+body {
+	background-color: #dddddd;
+}
+
+#icon_block {
     position: relative;
     float: left;
-    background-color: #dddddd;
+    background-color: #c2dfef;
     color: brown;
     padding: 25px;
     margin: 0px 0px 0px 0px;
+
+}
+
+
+#icon_block ul {
+	list-style: none;
+	/*margin: 0, 5px, 0, 0;*/
+	display: inline;
+}
+
+#icon_block li {
+	position: relative;
+	margin: 0, 10px, 0, 0;
+	float: left;
+}
+/* Specifierar bilden i icon_block */
+#icon_block img {
+	float: left;
+	width: auto;
+	height: 30px;
+}
+#icon_block text {
+	width: 5px;
 }
 
 .meny {
@@ -15,6 +42,12 @@
 #hem {
 	width: 50px;
 	float: right;
+}
+
+#boka {
+	width: 96px;
+	float: right;
+	
 }
 #information {
 	float: right;
@@ -51,6 +84,8 @@
 }
 
 .center_content {
+	height: auto;
+	width: auto;
     position: relative;
     background-color: #dddddd;
     padding: 1000px;
