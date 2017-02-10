@@ -20,8 +20,11 @@ body {
 }
 
 #icon_block li {
+	width: 40px;
+	height: 20px;
+	text-align: center;
 	position: relative;
-	margin: 0, 10px, 0, 0;
+	margin: -5px 10px -10px 0; /* NORTH, EAST, SOUTH, WEST */
 	float: left;
 }
 /* Specifierar bilden i icon_block */
@@ -83,7 +86,7 @@ body {
     width: 150px;
 }
 
-.center_content {
+/*.center_content {
 	height: auto;
 	width: auto;
     position: relative;
@@ -95,7 +98,7 @@ body {
     background-color: #dddddd;
     padding: 5px;
     margin-left: 170px;
-}
+}*/
 
 .right_content {
     background-color: #dddddd;
