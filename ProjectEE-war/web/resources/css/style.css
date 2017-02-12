@@ -58,7 +58,8 @@
 
 #top {
     position: relative;
-    background-color: #000099;
+	background: #999999;
+	background:	linear-gradient(#999999, #000000);
     color: white;
     padding: 25px;
     margin: 10px 0px 10px 200px; /* NORTH, EAST, SOUTH, WEST */
@@ -75,7 +76,7 @@
     float: left;
     background-color: #ece3a5;
     padding: 5px;
-    width: 150px;
+    width: 180px;
 }
 
 #right {
@@ -100,17 +101,18 @@
 }*/
 
 .preformat {
-	
 	white-space: pre;
 	font-family: Courier;
-	list-style: none;
 }
 
-.right_content {
+#content {
+	border-style: solid;
+}
+.contentformat {
 	text-align: center;
     background-color: #cccccc;
     padding: 5px;
-    margin: 0px 170px 0px 170px;
+    margin: 0px 170px 0px 200px; /* NORTH, EAST, SOUTH, WEST */
 }
 
 #top a:link, #top a:visited {
