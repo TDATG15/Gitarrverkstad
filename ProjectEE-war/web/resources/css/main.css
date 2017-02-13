@@ -1,9 +1,14 @@
 body {
-    background-color: #cccccc;
+    background-color: #ffb66d;
     font-size: 12px;
     font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
-    color: #000000;  
+    color: #000000;
     margin: 10px;
+	height: 100%;
+}
+
+html {
+	height: 100%;
 }
 
 h1 {
