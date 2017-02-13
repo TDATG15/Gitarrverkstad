@@ -15,6 +15,7 @@
 	/*margin: 0, 5px, 0, 0;*/
 	display: inline;
 }
+
 /* Specifierar elemented i listan */
 #icon_block li {
 	width: 40px;
@@ -58,8 +59,8 @@
 
 #top {
     position: relative;
-	background: #999999;
-	background:	linear-gradient(#999999, #000000);
+	background: #666666;
+	background:	linear-gradient(#666666, #999999);
     color: white;
     padding: 25px;
     margin: 10px 0px 10px 200px; /* NORTH, EAST, SOUTH, WEST */
