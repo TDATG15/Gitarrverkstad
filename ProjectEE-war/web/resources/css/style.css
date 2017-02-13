@@ -3,7 +3,7 @@
     position: relative;
     float: left;
     background-color: #ffffff;
-    color: brown;
+    color: blue;
     padding: 25px;
     margin: 0px 0px 0px 0px; /* NORTH, EAST, SOUTH, WEST */
 
@@ -33,6 +33,7 @@
 
 #icon_block text {
 	font-family: Courier;
+        text.color
 	width: 5px;
 	text-align: center;
 }
@@ -105,14 +106,36 @@
 	font-family: Courier;
 }
 
+.testing {
+        white-space: pre;
+        font-family: Courier;
+        font-size: 15px;
+}
+
+.findme {
+        margin:25px 0px 0px 50px;
+}
 #content {
 	border-style: solid;
 }
+
+#leftcontent {
+        border-style: solid;
+        float:left;
+        
+}
 .contentformat {
-	text-align: center;
+    text-align: center;
     background-color: #cccccc;
     padding: 5px;
     margin: 0px 170px 0px 200px; /* NORTH, EAST, SOUTH, WEST */
+}
+
+.leftcontent{
+    text-align: left;
+    background-color: #cccccc;
+    padding: 5px;
+    margin: 25px 0px 0px 0px;
 }
 
 #top a:link, #top a:visited {
