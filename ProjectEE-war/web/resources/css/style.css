@@ -33,7 +33,6 @@
 
 #icon_block text {
 	font-family: Courier;
-        text.color
 	width: 5px;
 	text-align: center;
 }
@@ -75,14 +74,14 @@
 
 #left {
     float: left;
-    background-color: #ece3a5;
+    background-color: #d97a1a;
     padding: 5px;
     width: 180px;
 }
 
 #right {
     float: right;
-    background-color: #ece3a5;
+    background-color: #d97a1a;
     padding: 5px;
     width: 150px;
 }
