@@ -49,7 +49,10 @@
                     <ui:insert name="right">Right</ui:insert>
                 </div>
                 <div id="content" class="contentformat">
+					<h:outputText rendered="#{not editBean.editmode}"
                     <ui:insert name="content">Content</ui:insert>
+						<h:commandButton value="Edit" action="#{editBean.edit()}" rendered="#{not editBean.editmode}"/>
+						<h:commandButton value="Save" action="#{editBean.save()}" rendered="#{editBean.editmode}"/>
 					
                 </div>
 				<!--<div id="picture-slideshow">
