@@ -49,11 +49,11 @@
                     <ui:insert name="right">Right</ui:insert>
                 </div>
                 <div id="content" class="contentformat">
-					<h:outputText rendered="#{not editBean.editmode}"
+					<!-- <h:dataTable value="#{T}" -->
                     <ui:insert name="content">Content</ui:insert>
-						<h:commandButton value="Edit" action="#{editBean.edit()}" rendered="#{not editBean.editmode}"/>
-						<h:commandButton value="Save" action="#{editBean.save()}" rendered="#{editBean.editmode}"/>
-					
+						<h:commandButton value="Edit" action="#{editBean.edit()}" rendered="#{not editBean.editMode}"/>
+						<h:commandButton value="Save" action="#{editBean.save()}" rendered="#{editBean.editMode}"/>
+						
                 </div>
 				<!--<div id="picture-slideshow">
 					<ul id="pictureformati">
@@ -63,6 +63,21 @@
 					
 					</ul>
 				</div> -->
+				<h:form id="guitar-display">
+					<p:carousel value="/resources/images/" var="product" autoPlayInterval="4000" effect="fade" circular="true" headerText="Gitarrer" style="width: 100%">
+						<h:outputLink value="DisplayImage?Image_id=gitarr1.jpg" target="_blank" >
+							<h:panelGrid columns="1" style="width: 100%" cellpadding="5">
+								<p:graphicImage value="/resources/images/gitarr1.jpg" width="50" height="50"/>
+								
+								<h:outputText value="Model: Custom" />  
+								<h:outputText value="k."/>  
+ 
+							</h:panelGrid>  
+						</h:outputLink> 
+					</p:carousel> 
+				</h:form>
+											
+"
             </div>
         </div>
     </h:body>

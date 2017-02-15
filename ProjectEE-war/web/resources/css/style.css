@@ -134,6 +134,9 @@
     margin: 0px 170px 0px 200px; /* NORTH, EAST, SOUTH, WEST */
 }
 
+#guitar-display {
+	margin: 0px 170px 0px 200px; /* NORTH, EAST, SOUTH, WEST */
+}
 
 #pictures-slideshow	 {
 	overflow: hidden;
@@ -159,7 +162,7 @@
 
 #picture-slideshow img {
 	width: 230px;
-	height: 4	50px
+	height: 450px
 }
 
 .leftcontent{
