@@ -1,23 +1,35 @@
-package se.miun.editBeans;
+/*package se.miun.editBeans;
 
-import javax.inject.Named;
-import javax.faces.view.ViewScoped;
-import static javax.ws.rs.client.Entity.entity;
+import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ManagedBean;
 
-@Named(value = "editBean")
-@ViewScoped
+@ManagedBean(name = "editBean")
+@RequestScoped
 public class editBean {
-	private boolean editmode;
+	private boolean editMode;
+	private String text;
+	
+	//TexttestFacade test = new TexttestFacade();
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
 	
 	public void edit() {
-		editmode = true;
+		editMode = true;
 	}
-	
+		
 	public void save() {
-		//entityService.save(entity);
+		//test.save(entity);	
+		editMode = false;	
 	}
 	
-	public boolean isEditmode() {
-		return editmode;
+	public boolean isEditMode() {
+		return editMode;
 	}
 }
+*/
