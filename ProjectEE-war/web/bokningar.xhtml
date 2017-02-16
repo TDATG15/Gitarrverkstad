@@ -8,6 +8,7 @@
 		<h:outputStylesheet name="/css/main.css"/>
 		<h:outputStylesheet name="/css/style.css"/>
 		<title>Anders Gitarrverkstad</title>
+                <javascript></javascript>
     </h:head>
     <h:body>
         <div id="icon_block">
@@ -44,12 +45,74 @@
                 <div id="right">
                     <ui:insert name="right">Right</ui:insert>
                 </div>
-                <div id="content" class="contentformat">
-                    <ui:insert name="content">Här ska bokningar skes</ui:insert>
-					
+                <div id="content" class="dontmesswithprevious">
+                    <table class="tables">
+                        <tr>
+                            <th class="header">Måndag</th>
+                            <th class="header">Tisdag</th>
+                            <th class="header">Onsdag</th>
+                            <th class="header">Torsdag</th>
+                            <th class="header">Fredag</th>
+                            <th class="header">Lördag</th>
+                            <th class="header">Söndag</th>
+                        </tr>
+                        <tr>
+                            <td id="p1" class="cells">Massor</td>
+                            <td class="cells">med</td>
+                            <td class="cells">rutor</td>
+                            <td class="cells">att</td>
+                            <td class="cells">skriva</td>
+                            <td class="cells">saker</td>
+                            <td class="cells">i</td>
+                        </tr>
+                        <tr>
+                            <td class="cells">Det</td>
+                            <td class="cells">är</td>
+                            <td class="cells">faktiskt</td>
+                            <td class="cells">ganska</td>
+                            <td class="cells">trevligt</td>
+                            <td class="cells">eller</td>
+                            <td class="cells">hur?</td>
+                        </tr>
+                        <tr>
+                            <td class="cells">Vi</td>
+                            <td class="cells">får</td>
+                            <td class="cells">se</td>
+                            <td class="cells">hur</td>
+                            <td class="cells">detta</td>
+                            <td class="cells">artar</td>
+                            <td class="cells">sig</td>
+                        </tr>
+                        <tr>
+                            <td class="cells">Fast</td>
+                            <td class="cells">nu</td>
+                            <td class="cells">är</td>
+                            <td class="cells">alla</td>
+                            <td class="cells">dessa</td>
+                            <td class="cells">rutor</td>
+                            <td class="cells">slut ...</td>
+                        </tr>
+                        <tr>
+                            <td class="cells">Det</td>
+                            <td class="cells">var</td>
+                            <td class="cells">kul</td>
+                            <td class="cells">så</td>
+                            <td class="cells">länge</td>
+                            <td class="cells">det</td>
+                            <td class="cells">varade!</td>
+                        </tr>
+                    </table>
+                    <!--<ui:insert name="content">Boka något!</ui:insert>-->
+                   
                 </div>
             </div>
         </div>
+           <button onclick="printHello()">Boka något!</button>
+           <script>
+               function printHello(){
+                   table.getElementById("p1").innerHTML = Hello;
+               }
+             </script>
     </h:body>
 </html>
 
