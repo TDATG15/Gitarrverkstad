@@ -5,7 +5,6 @@
 	  xmlns:f="http://java.sun.com/jsf/core"
 	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-	  template="/WEB-INF/templates/newTemplate.xhtml"
 	  >
     <h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -49,30 +48,33 @@
                     <ui:insert name="right">Right</ui:insert>
                 </div>
                 <div id="content" class="contentformat">
-					<h:dataTable value="#{get_Home_Page_Data.getFrontPageText()}" var="eB" border="1"></h:dataTable>
-						
-					<h:outputText value="#{eB.text}" rendered="#{not eB.isEditMode()}"/>
-					<h:inputText value="#{eB.setText(text)}" rendered="#{eB.isEditMode()}"/>
-                    <ui:insert name="content">#{eB.text}</ui:insert>
-					<!--<div class="buttons">
-						<h:commandButton value="Edit" action="#{editBean.edit()}" rendered="#{not editBean.isEditMode()}"/>
-						<h:commandButton value="Save" action="#{editBean.save()}" rendered="#{editBean.isEditMode()}"/>
-					</div>-->
+									
+					<h:inputText value="conent" ></h:inputText>
 					
 					
                 </div>
 				<h:form id="guitar-display">
-					<p:carousel value="/resources/images/" var="product" autoPlayInterval="4000" effect="fade" circular="true" headerText="Gitarrer" style="width: 100%">
-						<h:outputLink value="DisplayImage?Image_id=gitarr1.jpg" target="_blank" >
-							<h:panelGrid columns="1" style="width: 100%" cellpadding="5">
+					<p:carousel value="/resources/images/" var="product" autoPlayInterval="4000" effect="fade" circular="true" headerText="Gitarrer" style="width: 100%">	
+						<!--  -->
+							<h:panelGrid columns="2" style=" width: 100%" cellpadding="5">
+								<h:outputLink value="DisplayImage?Image_id=gitarr1.jpg" target="_blank" >
 								<p:graphicImage value="/resources/images/gitarr1.jpg" width="50" height="50"/>
 								
 								<h:outputText value="Model: Custom" />  
 								
-								<h:outputText value="k."/>  
+								<h:outputText value="k."/>
+								</h:outputLink>
 								
+								<h:outputLink value="DisplayImage?Image_id=gitarr1.jpg" target="_blank" >
+								<p:graphicImage value="/resources/images/gitarr2.jpg" width="50" height="50"/>
+								
+								<h:outputText value="Model: Custom1" />  
+								
+								<h:outputText value="1k."/>  
+								</h:outputLink>
+						
 							</h:panelGrid>  
-						</h:outputLink> 
+						
 						
 					</p:carousel> 
 				</h:form>
