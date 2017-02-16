@@ -14,12 +14,12 @@
 		<title>Anders Gitarrverkstad</title>
     </h:head>
     <h:body>
+		
         <div id="icon_block">
 			<ul>
 				<!-- Lägger till en bild -->
 				<li><h:graphicImage library="images" name="icon.png"/></li> 
 				<li><h:outputText value="Anders Gitarrverkstad" styleClass="font"/></li>
-				<!-- <li><ui:insert name="icon_block">Anders Gitarrverkstad</ui:insert></li> -->
 			</ul>
         </div>
 		<!-- Top blocket -->
@@ -49,20 +49,18 @@
                     <ui:insert name="right">Right</ui:insert>
                 </div>
                 <div id="content" class="contentformat">
-					<!-- <h:dataTable value="#{T}" -->
-                    <ui:insert name="content">Content</ui:insert>
-						<h:commandButton value="Edit" action="#{editBean.edit()}" rendered="#{not editBean.editMode}"/>
-						<h:commandButton value="Save" action="#{editBean.save()}" rendered="#{editBean.editMode}"/>
+					<h:dataTable value="#{get_Home_Page_Data.getFrontPageText()}" var="eB" border="1"></h:dataTable>
 						
+					<h:outputText value="#{eB.text}" rendered="#{not eB.isEditMode()}"/>
+					<h:inputText value="#{eB.setText(text)}" rendered="#{eB.isEditMode()}"/>
+                    <ui:insert name="content">#{eB.text}</ui:insert>
+					<!--<div class="buttons">
+						<h:commandButton value="Edit" action="#{editBean.edit()}" rendered="#{not editBean.isEditMode()}"/>
+						<h:commandButton value="Save" action="#{editBean.save()}" rendered="#{editBean.isEditMode()}"/>
+					</div>-->
+					
+					
                 </div>
-				<!--<div id="picture-slideshow">
-					<ul id="pictureformati">
-						<li><h:graphicImage library="images" name="gitarr1.jpg"/></li>
-						<li><h:graphicImage library="images" name="gitarr2.jpg"/></li>
-					
-					
-					</ul>
-				</div> -->
 				<h:form id="guitar-display">
 					<p:carousel value="/resources/images/" var="product" autoPlayInterval="4000" effect="fade" circular="true" headerText="Gitarrer" style="width: 100%">
 						<h:outputLink value="DisplayImage?Image_id=gitarr1.jpg" target="_blank" >
@@ -70,14 +68,14 @@
 								<p:graphicImage value="/resources/images/gitarr1.jpg" width="50" height="50"/>
 								
 								<h:outputText value="Model: Custom" />  
+								
 								<h:outputText value="k."/>  
- 
+								
 							</h:panelGrid>  
 						</h:outputLink> 
+						
 					</p:carousel> 
 				</h:form>
-											
-"
             </div>
         </div>
     </h:body>

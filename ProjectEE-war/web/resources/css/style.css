@@ -116,8 +116,9 @@
 .findme {
         margin:25px 0px 0px 50px;
 }
-#content {
-	/*border-style: solid;*/
+.button{
+	float: right;
+	display: inline-block;
 }
 
 #leftcontent {
