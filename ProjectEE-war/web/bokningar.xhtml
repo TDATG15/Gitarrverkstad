@@ -58,8 +58,8 @@
                         </tr>
                         <tr>
                             <td id="p1" class="cells">Massor</td>
-                            <td class="cells">med</td>
-                            <td class="cells">rutor</td>
+                            <td id="p2" class="cells">med</td>
+                            <td id="p3" class="cells">rutor</td>
                             <td class="cells">att</td>
                             <td class="cells">skriva</td>
                             <td class="cells">saker</td>
@@ -110,8 +110,13 @@
            <button onclick="printHello()">Boka något!</button>
            <script>
                function printHello(){
-                   table.getElementById("p1").esraseL= Hello;
+                   var click =document.getElementById("p1");
+                   click.innerHTML = "Fantastic"
                }
+               /*function printHello(){
+                   var click =document.getElementById("p1");
+                   click.innerHTML = "HELLO!"
+               }*/
              </script>
     </h:body>
 </html>
