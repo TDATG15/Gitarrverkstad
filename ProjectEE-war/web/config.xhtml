@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Configuration Page</title>
+    </h:head>
+    <h:body>
+        <h3>Total # of instruments:#{controllBean.count()}</h3>
+        <h:form>
+            <h:dataTable value="#{controllBean.all}" var="instrument">
+                <h:column>
+                    <f:facet name="header"> edit </f:facet>
+                    <h:commandLink value="Edit" action="#{controllBean.edit(instrument)}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Instrument Id</f:facet>
+                        #{instrument.instrumentId}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Beskrivning</f:facet>
+                        #{instrument.beskrivning}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Model</f:facet>
+                        #{instrument.modell}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Pris</f:facet>
+                        #{instrument.pris}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Tillverkare</f:facet>
+                        #{instrument.tillverkare}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Tidigare Ägare</f:facet>
+                        #{instrument.tidigareAgare}
+                </h:column>
+                <h:column>
+                    <h:commandLink value="Delete" 
+                                   action="#{controllBean.delete(instrument)}" />
+                </h:column>
+                </h:dataTable>
+        </h:form>
+        <h:form>
+            <h:commandButton value="Add an new instrument" 
+                             action="add" />
+        </h:form>
+    </h:body>
+</html>
+
