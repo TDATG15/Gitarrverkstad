@@ -6,8 +6,10 @@
 package beans;
 
 import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
+
 import java.io.Serializable;
+import javax.enterprise.context.SessionScoped;
+
 
 /**
  *
