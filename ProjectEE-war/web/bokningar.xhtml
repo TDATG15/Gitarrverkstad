@@ -13,15 +13,16 @@
                 <!-- Some JQuery stuff-->
                 <script>
                 $(document).ready(function(){
-                $("#TheTable td, th").click(function(){
-                    /*var columnNo = parseInt($(this).index() ) + 1; <!-- cell counter -->
-                    var rowNo = parseInt( $(this).parent().index() ) +1;*/
-                    $("#result").html("you pressed a cell, well done!");
+                $("#TheTable th, td").click(function(){
+                    var columnNo = parseInt($(this).index() ) + 1; 
+                    var rowNo = parseInt( $(this).parent().index() ) +1;
+                    $("#result").html("Row : " + rowNo +", Column: " + columnNo);
                 });
-            })
+            });
+           
                     </script>
                 <!-- End of JQuery -->
-                 <script>
+               <!--  <script>
                function  clickCell(c){
                    var targ;
                    if (!c){
@@ -38,7 +39,7 @@
                    alert("you clicked on a" + tname + "element.");
                }
                    
-               </script>
+               </script>-->
     </h:head>
     <body onmousedown="clickCell(event)">
         <div id="icon_block">
@@ -76,7 +77,7 @@
                     <ui:insert name="right">Right</ui:insert>
                 </div>
                 <div id="content" class="dontmesswithprevious">
-                    <div id="result"> </div>
+                   
                     <table class="tables" id="theTable">
                         <tr>
                             <th class="header">Måndag</th>
@@ -86,42 +87,29 @@
                             <th class="header">Fredag</th>
                         </tr>
                         <tr>
-                            <td id="p1" class="cells">Färre</td>
+                            <td id="p1" class="cells">11.00</td>
                             <td id="p2" class="cells">
-                                <a href="resources/images/icon.png">rutor</a></td>
-                            <td id="p3" class="cells">att </td>
-                            <td class="cells">skriva</td>
-                            <td class="cells">i</td>
+                                <a href="resources/images/icon.png">11.00</a></td>
+                            <td id="p3" class="cells">11.00</td>
+                            <td class="cells">11.00</td>
+                            <td class="cells">11.00</td>
                         </tr>
                         <tr>
-                            <td class="cells">Men</td>
-                            <td class="cells">det</td>
-                            <td class="cells">är</td>
-                            <td class="cells">helt</td>
-                            <td class="cells">okej</td>
+                            <td class="cells">15.00</td>
+                            <td class="cells">15.00</td>
+                            <td class="cells">15.00</td>
+                            <td class="cells">15.00</td>
+                            <td class="cells">15.00</td>
                         </tr>
                         <tr>
-                            <td class="cells">Det</td>
-                            <td class="cells">blir</td>
-                            <td class="cells">nog</td>
-                            <td class="cells">bra</td>
-                            <td class="cells">ändå!</td>
-                        </tr>
-                        <tr>
-                            <td class="cells">Snart</td>
-                            <td class="cells">är</td>
-                            <td class="cells">alla</td>
-                            <td class="cells">rutor</td>
-                            <td class="cells">slut</td>
-                        </tr>
-                        <tr>
-                            <td class="cells">Fast</td>
-                            <td class="cells">det</td>
-                            <td class="cells">var</td>
-                            <td class="cells">ändå</td>
-                            <td class="cells">kul!</td>
+                            <td class="cells">17.00</td>
+                            <td class="cells">17.00</td>
+                            <td class="cells">17.00</td>
+                            <td class="cells">17.00</td>
+                            <td class="cells">17.00</td>
                         </tr>
                     </table>
+                     <div id="result"> </div>
                     <!--<ui:insert name="content">Boka något!</ui:insert>-->
                    
                 </div>
