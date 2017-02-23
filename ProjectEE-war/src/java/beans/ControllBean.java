@@ -1,10 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package beans;
 
+
+
+import beans.service.InstrumentFacade;
 import entities.Instrument;
 import javax.inject.Named;
 
@@ -15,10 +14,7 @@ import javax.enterprise.context.SessionScoped;
 
 import javax.inject.Inject;
 
-/**
- *
- * @author Elementalist
- */
+
 @Named(value = "controllBean")
 @SessionScoped
 public class ControllBean implements Serializable {
@@ -27,7 +23,7 @@ public class ControllBean implements Serializable {
     InstrumentBean instrumentBean;
     
     @EJB
-    InstrumentFacade instrumentFacade;
+    InstrumentFacade instrumentFacade;   
     
      public List<Instrument> getAll(){
         return instrumentFacade.findAll();
@@ -47,10 +43,11 @@ public class ControllBean implements Serializable {
         Instrument e = new Instrument();
         e.setInstrumentId(instrumentBean.getInstrumentId());
         e.setBeskrivning(instrumentBean.getBeskrivning());
-        e.setModell(instrumentBean.getModell());
+        e.setModel(instrumentBean.getModel());
         e.setPris(instrumentBean.getPris());
         e.setTillverkare(instrumentBean.getTillverkare());
         e.setTidigareAgare(instrumentBean.getTidigareAgare());
+        e.setImage(instrumentBean.getImage());
         instrumentFacade.create(e);
         
         return "config";
@@ -60,11 +57,11 @@ public class ControllBean implements Serializable {
         
         instrumentBean.setInstrumentId(e.getInstrumentId());
         instrumentBean.setBeskrivning(e.getBeskrivning());
-        instrumentBean.setModell(e.getModell());
+        instrumentBean.setModel(e.getModel());
         instrumentBean.setPris(e.getPris());
         instrumentBean.setTillverkare(e.getTillverkare());
         instrumentBean.setTidigareAgare(e.getTidigareAgare());
-        
+        instrumentBean.setImage(e.getImage());
         return "update";
     }
     public String save(){
@@ -72,11 +69,11 @@ public class ControllBean implements Serializable {
         Instrument e = new Instrument(instrumentBean.getInstrumentId());
         
         e.setBeskrivning(instrumentBean.getBeskrivning());
-        e.setModell(instrumentBean.getModell());
+        e.setModel(instrumentBean.getModel());
         e.setPris(instrumentBean.getPris());
         e.setTillverkare(instrumentBean.getTillverkare());
         e.setTidigareAgare(instrumentBean.getTidigareAgare());
-        
+        e.setImage(instrumentBean.getImage());
         
         instrumentFacade.edit(e);
         
