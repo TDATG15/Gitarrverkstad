@@ -9,12 +9,12 @@
     <h:body>
         <h:form>
             <h:panelGrid columns="2">
-                Id
-                <h:inputText value="#{instrumentBean.instrumentId}" />
+                Instrument Id
+                <h:inputText value="#{instrumentBean.instrumentId}"/>
                 Beskrivning
                 <h:inputText value="#{instrumentBean.beskrivning}"/>
                 Model
-                <h:inputText value="#{instrumentBean.modell}" />
+                <h:inputText value="#{instrumentBean.model}" />
                 Pris
                 <h:inputText value="#{instrumentBean.pris}" />
                 Tillverkare
@@ -26,7 +26,6 @@
                                  action="#{controllBean.save()}" />
             </h:panelGrid>
         </h:form>
-
     </h:body>
 </html>
 
