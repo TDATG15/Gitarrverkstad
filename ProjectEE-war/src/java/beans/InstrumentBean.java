@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package beans;
 
 import javax.inject.Named;
@@ -10,21 +6,17 @@ import javax.inject.Named;
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 
-
-/**
- *
- * @author Elementalist
- */
 @Named(value = "instrumentBean")
 @SessionScoped
 public class InstrumentBean implements Serializable {
 
     private Integer instrumentId;
-    private String modell;
+    private String model;
     private String beskrivning;
     private Integer pris;
     private String tillverkare;
     private String tidigareAgare;
+    private String image;
     
     public Integer getInstrumentId() {
         return instrumentId;
@@ -34,12 +26,12 @@ public class InstrumentBean implements Serializable {
         this.instrumentId = instrumentId;
     }
 
-    public String getModell() {
-        return modell;
+    public String getModel() {
+        return model;
     }
 
-    public void setModell(String modell) {
-        this.modell = modell;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public String getBeskrivning() {
@@ -72,6 +64,14 @@ public class InstrumentBean implements Serializable {
 
     public void setTidigareAgare(String tidigareAgare) {
         this.tidigareAgare = tidigareAgare;
+    }
+      
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
     
 }

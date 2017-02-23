@@ -9,8 +9,9 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -28,23 +29,25 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Instrument.findAll", query = "SELECT i FROM Instrument i")
     , @NamedQuery(name = "Instrument.findByInstrumentId", query = "SELECT i FROM Instrument i WHERE i.instrumentId = :instrumentId")
-    , @NamedQuery(name = "Instrument.findByModell", query = "SELECT i FROM Instrument i WHERE i.modell = :modell")
+    , @NamedQuery(name = "Instrument.findByModel", query = "SELECT i FROM Instrument i WHERE i.model = :model")
+    , @NamedQuery(name = "Instrument.findByBeskrivning", query = "SELECT i FROM Instrument i WHERE i.beskrivning = :beskrivning")
     , @NamedQuery(name = "Instrument.findByPris", query = "SELECT i FROM Instrument i WHERE i.pris = :pris")
     , @NamedQuery(name = "Instrument.findByTillverkare", query = "SELECT i FROM Instrument i WHERE i.tillverkare = :tillverkare")
-    , @NamedQuery(name = "Instrument.findByTidigareAgare", query = "SELECT i FROM Instrument i WHERE i.tidigareAgare = :tidigareAgare")})
+    , @NamedQuery(name = "Instrument.findByTidigareAgare", query = "SELECT i FROM Instrument i WHERE i.tidigareAgare = :tidigareAgare")
+    , @NamedQuery(name = "Instrument.findByImage", query = "SELECT i FROM Instrument i WHERE i.image = :image")})
 public class Instrument implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    //@GeneratedValue(strategy =GenerationType.IDENTITY)
     @Basic(optional = false)
     @NotNull
     @Column(name = "INSTRUMENT_ID")
     private Integer instrumentId;
     @Size(max = 100)
-    @Column(name = "MODELL")
-    private String modell;
-    @Lob
-    @Size(max = 32700)
+    @Column(name = "MODEL")
+    private String model;
+    @Size(max = 1000)
     @Column(name = "BESKRIVNING")
     private String beskrivning;
     @Column(name = "PRIS")
@@ -52,9 +55,12 @@ public class Instrument implements Serializable {
     @Size(max = 70)
     @Column(name = "TILLVERKARE")
     private String tillverkare;
-    @Size(max = 70)
+    @Size(max = 100)
     @Column(name = "TIDIGARE_AGARE")
     private String tidigareAgare;
+    @Size(max = 256)
+    @Column(name = "IMAGE")
+    private String image;
 
     public Instrument() {
     }
@@ -71,12 +77,12 @@ public class Instrument implements Serializable {
         this.instrumentId = instrumentId;
     }
 
-    public String getModell() {
-        return modell;
+    public String getModel() {
+        return model;
     }
 
-    public void setModell(String modell) {
-        this.modell = modell;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public String getBeskrivning() {
@@ -109,6 +115,14 @@ public class Instrument implements Serializable {
 
     public void setTidigareAgare(String tidigareAgare) {
         this.tidigareAgare = tidigareAgare;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     @Override
