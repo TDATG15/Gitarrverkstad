@@ -116,27 +116,32 @@
 .tables{
     width:100%;
     height:100%;
-    border-left:2px solid red;
+    /*border-left:2px solid red;
     border-bottom:2px solid red;
     border-right:2px solid red;
-    border-top: 2px solid red;
+    border-top: 2px solid red;*/
     border-collapse: collapse;
     
 }
 
 .cells{
-    border-left: solid green;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #ffb66d;
+    /*border-left: solid green;
     border-right: solid green;
     border-top: solid green;
-    border-bottom: solid green;
+    border-bottom: solid green;*/
 }
 
 .header{
-    background-color: darkorchid;
-    border-left: 2px solid black;
+    background-color: #d97a1a;
+    border-style: solid;
+    border-color: #ffb66d;
+    /*border-left: 2px solid black;
     border-right: 2px solid black;
     border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid black;*/
 }
 
 .findme {
@@ -162,10 +167,9 @@
 }
 
 .dontmesswithprevious{
-    height: 600px;
+    height: 250px;
     text-align:center;
-    background-color: #ffffff;
-    padding: 5px;
+    /*padding: 5px;*/
     margin: 0px 170px 0px 200px;
     
 }
