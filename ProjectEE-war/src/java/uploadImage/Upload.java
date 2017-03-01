@@ -75,7 +75,7 @@ public class Upload extends HttpServlet {
                 Connection con = DriverManager.getConnection(url);
                 
                 // query to insert name and image name
-                PreparedStatement ps = con.prepareStatement("Insert Into imagedemo(image)values (?)");
+                PreparedStatement ps = con.prepareStatement("Insert Into instrument(image)values (?)");
                 String filePath = fileSaveDir + File.separator + fileName;
                 ps.setString(1, filePath);
                 ps.executeUpdate();
