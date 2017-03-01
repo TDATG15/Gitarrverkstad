@@ -1,4 +1,3 @@
-
 package java.client;
 
 import javax.ws.rs.ClientErrorException;
