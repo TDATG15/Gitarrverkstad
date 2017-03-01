@@ -10,7 +10,7 @@ import javax.ws.rs.core.Application;
 
 /**
  *
- * @author Elementalist
+ * @author elementalist
  */
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
@@ -29,7 +29,13 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(service.InstrumentFacadeREST.class);
+        resources.add(entities.service.ImageFacadeREST.class);
+        resources.add(entities.service.InstrumentFacadeREST.class);
+        resources.add(schema.entities.service.ArendeFacadeREST.class);
+        resources.add(schema.entities.service.ForfraganFacadeREST.class);
+        resources.add(schema.entities.service.KundFacadeREST.class);
+        resources.add(schema.entities.service.TidblockFacadeREST.class);
+        resources.add(schema.entities.service.TidbokFacadeREST.class);
     }
     
 }

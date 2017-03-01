@@ -1,5 +1,5 @@
 
-package beans;
+package instrument.beans;
 
 import javax.inject.Named;
 
@@ -16,7 +16,6 @@ public class InstrumentBean implements Serializable {
     private Integer pris;
     private String tillverkare;
     private String tidigareAgare;
-    private String image;
     
     public Integer getInstrumentId() {
         return instrumentId;
@@ -65,13 +64,6 @@ public class InstrumentBean implements Serializable {
     public void setTidigareAgare(String tidigareAgare) {
         this.tidigareAgare = tidigareAgare;
     }
-      
-    public String getImage() {
-        return image;
-    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-    
+
 }

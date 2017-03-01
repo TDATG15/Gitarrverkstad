@@ -7,13 +7,13 @@ package entities;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -37,6 +37,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Instrument.findByImage", query = "SELECT i FROM Instrument i WHERE i.image = :image")})
 public class Instrument implements Serializable {
 
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "instrument")
+    private Image image;
+
     private static final long serialVersionUID = 1L;
     @Id
     //@GeneratedValue(strategy =GenerationType.IDENTITY)
@@ -59,8 +62,8 @@ public class Instrument implements Serializable {
     @Column(name = "TIDIGARE_AGARE")
     private String tidigareAgare;
     @Size(max = 256)
-    @Column(name = "IMAGE")
-    private String image;
+    
+    
 
     public Instrument() {
     }
@@ -117,13 +120,6 @@ public class Instrument implements Serializable {
         this.tidigareAgare = tidigareAgare;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
 
     @Override
     public int hashCode() {
@@ -148,6 +144,14 @@ public class Instrument implements Serializable {
     @Override
     public String toString() {
         return "entities.Instrument[ instrumentId=" + instrumentId + " ]";
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
     }
     
 }

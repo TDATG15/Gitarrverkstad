@@ -1,4 +1,4 @@
-package java.client;
+package instrument.java.client;
 
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
