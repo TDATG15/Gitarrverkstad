@@ -2,9 +2,7 @@
 package instrument.beans;
 
 import entities.Instrument;
-import image.beans.InstrumentFacade;
 import javax.inject.Named;
-
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
@@ -16,14 +14,14 @@ import javax.inject.Inject;
 @Named(value = "controllBean")
 @SessionScoped
 public class ControllBean implements Serializable {
-
+    
     @Inject
-    InstrumentBean instrumentBean;
+            InstrumentBean instrumentBean;
     
     @EJB
-    InstrumentFacade instrumentFacade;   
+            InstrumentFacade instrumentFacade;
     
-     public List<Instrument> getAll(){
+    public List<Instrument> getAll(){
         return instrumentFacade.findAll();
     }
     
@@ -39,12 +37,12 @@ public class ControllBean implements Serializable {
     public String add(){
         
         Instrument e = new Instrument();
-        e.setInstrumentId(instrumentBean.getInstrumentId());
+        //e.setInstrumentId(instrumentBean.getInstrumentId());
         e.setBeskrivning(instrumentBean.getBeskrivning());
         e.setModel(instrumentBean.getModel());
         e.setPris(instrumentBean.getPris());
         e.setTillverkare(instrumentBean.getTillverkare());
-        e.setTidigareAgare(instrumentBean.getTidigareAgare());
+        e.setImage(instrumentBean.getImage());
         
         instrumentFacade.create(e);
         
@@ -53,12 +51,12 @@ public class ControllBean implements Serializable {
     
     public String edit(Instrument e){
         
-        instrumentBean.setInstrumentId(e.getInstrumentId());
+        //instrumentBean.setInstrumentId(e.getInstrumentId());
         instrumentBean.setBeskrivning(e.getBeskrivning());
         instrumentBean.setModel(e.getModel());
         instrumentBean.setPris(e.getPris());
         instrumentBean.setTillverkare(e.getTillverkare());
-        instrumentBean.setTidigareAgare(e.getTidigareAgare());
+        instrumentBean.setImage(e.getImage());
         
         return "update";
     }
@@ -66,11 +64,11 @@ public class ControllBean implements Serializable {
         
         Instrument e = new Instrument(instrumentBean.getInstrumentId());
         
-        e.setBeskrivning(instrumentBean.getBeskrivning());
+        //e.setBeskrivning(instrumentBean.getBeskrivning());
         e.setModel(instrumentBean.getModel());
         e.setPris(instrumentBean.getPris());
         e.setTillverkare(instrumentBean.getTillverkare());
-        e.setTidigareAgare(instrumentBean.getTidigareAgare());
+        e.setImage(instrumentBean.getImage());
         
         
         instrumentFacade.edit(e);
