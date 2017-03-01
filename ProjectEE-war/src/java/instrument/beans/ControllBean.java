@@ -1,10 +1,8 @@
 
 package instrument.beans;
 
-
-
-import instrument.beans.service.InstrumentFacade;
 import entities.Instrument;
+import image.beans.InstrumentFacade;
 import javax.inject.Named;
 
 import java.io.Serializable;
@@ -47,7 +45,7 @@ public class ControllBean implements Serializable {
         e.setPris(instrumentBean.getPris());
         e.setTillverkare(instrumentBean.getTillverkare());
         e.setTidigareAgare(instrumentBean.getTidigareAgare());
-        e.setImage(instrumentBean.getImage());
+        
         instrumentFacade.create(e);
         
         return "config";
@@ -61,7 +59,7 @@ public class ControllBean implements Serializable {
         instrumentBean.setPris(e.getPris());
         instrumentBean.setTillverkare(e.getTillverkare());
         instrumentBean.setTidigareAgare(e.getTidigareAgare());
-        instrumentBean.setImage(e.getImage());
+        
         return "update";
     }
     public String save(){
@@ -73,7 +71,7 @@ public class ControllBean implements Serializable {
         e.setPris(instrumentBean.getPris());
         e.setTillverkare(instrumentBean.getTillverkare());
         e.setTidigareAgare(instrumentBean.getTidigareAgare());
-        e.setImage(instrumentBean.getImage());
+        
         
         instrumentFacade.edit(e);
         
