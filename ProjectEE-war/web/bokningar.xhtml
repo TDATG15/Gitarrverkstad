@@ -4,10 +4,22 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
      <h:head>
+  
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<h:outputStylesheet name="/css/main.css"/>
-		<h:outputStylesheet name="/css/style.css"/>
+		<h:outputStylesheet name="/css/style2.css"/>
 		<title>Anders Gitarrverkstad</title>
+                <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+                <link rel="stylesheet" href="/resources/demos/style.css"/>
+                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><!--The script with the function -->
+                <script>
+                    ( function(){
+                        $("#datepicker").datepicker();
+                    });
+                    </script>
                 <javascript></javascript>
                 <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
                 <!-- Some JQuery stuff-->
@@ -41,7 +53,7 @@
                    
                </script>-->
     </h:head>
-    <body onmousedown="clickCell(event)">
+    <h:body onmousedown="clickCell(event)">
         <div id="icon_block">
 			<ul>
 				<!-- Lägger till en bild -->
@@ -72,13 +84,14 @@
 			<div id="left">
 				<ui:insert name="left">Left</ui:insert>
             </div>
-            <div>
+           
                 <div id="right">
                     <ui:insert name="right">Right</ui:insert>
                 </div>
-                <div id="content" class="dontmesswithprevious">
+             <div id="center" class="dontmesswithprevious">
+                
                    
-                    <table class="tables" id="theTable">
+                    <!--<table class="tables" id="Table1">
                         <tr>
                             <th class="header">Måndag</th>
                             <th class="header">Tisdag</th>
@@ -87,33 +100,87 @@
                             <th class="header">Fredag</th>
                         </tr>
                         <tr>
-                            <td id="p1" class="cells">11.00</td>
+                            <td id="p1" class="cells">11 - 12</td>
                             <td id="p2" class="cells">
-                                <a href="resources/images/icon.png">11.00</a></td>
-                            <td id="p3" class="cells">11.00</td>
-                            <td class="cells">11.00</td>
-                            <td class="cells">11.00</td>
+                                <a href="resources/images/gitarr1">11 - 12</a></td>
+                            <td id="p3" class="cells">11 - 12</td>
+                            <td class="cells">11 - 12</td>
+                            <td class="cells">11 - 12</td>
                         </tr>
                         <tr>
-                            <td class="cells">15.00</td>
-                            <td class="cells">15.00</td>
-                            <td class="cells">15.00</td>
-                            <td class="cells">15.00</td>
-                            <td class="cells">15.00</td>
+                            <td class="cells">15 - 16</td>
+                            <td class="cells">15 - 16</td>
+                            <td class="cells">15 - 16</td>
+                            <td class="cells">15 - 16</td>
+                            <td class="cells">15 - 16</td>
                         </tr>
                         <tr>
-                            <td class="cells">17.00</td>
-                            <td class="cells">17.00</td>
-                            <td class="cells">17.00</td>
-                            <td class="cells">17.00</td>
-                            <td class="cells">17.00</td>
+                            <td class="cells">17 - 18</td>
+                            <td class="cells">17 - 18</td>
+                            <td class="cells">17 - 18</td>
+                            <td class="cells">17 - 18</td>
+                            <td class="cells">17 - 18</td>
                         </tr>
                     </table>
+                    
+                    <table class="tables" id="Table2">
+                        <tr>
+                            <th class="header">Måndag</th>
+                            <th class="header">Tisdag</th>
+                            <th class="header">Onsdag</th>
+                            <th class="header">Torsdag</th>
+                            <th class="header">Fredag</th>
+                        </tr>
+                        <tr>
+                            <td id="p1" class="cells">11 - 12</td>
+                            <td id="p2" class="cells">
+                                <a href="resources/images/gitarr2.jpg">11 - 12</a></td>
+                            <td id="p3" class="cells">11 - 12</td>
+                            <td class="cells">11 - 12</td>
+                            <td class="cells">11 - 12</td>
+                        </tr>
+                        <tr>
+                            <td class="cells">15 - 16</td>
+                            <td class="cells">15 - 16</td>
+                            <td class="cells">15 - 16</td>
+                            <td class="cells">15 - 16</td>
+                            <td class="cells">15 - 16</td>
+                        </tr>
+                        <tr>
+                            <td class="cells">17 - 18</td>
+                            <td class="cells">17 - 18</td>
+                            <td class="cells">17 - 18</td>
+                            <td class="cells">17 - 18</td>
+                            <td class="cells">17 - 18</td>
+                        </tr>
+                    </table>-->
+                    <p>Date: <input type="text" id="datepicker"></input></p>
+                    <input type="button" id="TheFirstTable" value="Table1"></input>
+                    <input type="button" id="TheSecondTable" value="table2"></input>
+                    <script type="text/javascript">
+                        var table1 = document.getElementById("table1");
+                        var table2 = document.getElementById("table2");
+                        
+                        var btnTabA = document.getElementById("TheFirstTable");
+                        var btnTabB = document.getElementById("TheSecondTable");
+                        
+                        btnTabA.onclick = function(){
+                            table1.style.display ="table";
+                            table2.style.display ="none";
+                        }
+                        btnTabA.onclick = function (){
+                            table1.style.display = "none"
+                            table2.style.display = "table"
+                        }
+                    </script>
+                   
+                    
                      <div id="result"> </div>
                     <!--<ui:insert name="content">Boka något!</ui:insert>-->
                    
-                </div>
+                
             </div>
+            
         </div>
            <button onclick="printHello()">Boka något!</button>
            <button onclick="printTable()">Skriv ut tabell!</button>
@@ -124,7 +191,7 @@
                    
                }
                /*function printHello(){
-                   var click =document.getElementById("p1"); #backup function
+                   var click =document.getElementById("p1"); #Backup function
                    click.innerHTML = "HELLO!"
                }*/
              </script>
@@ -146,6 +213,6 @@
                }
            </script>
           
-    </body>
+    </h:body>
 </html>
 
