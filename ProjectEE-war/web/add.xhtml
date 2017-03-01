@@ -9,8 +9,7 @@
     <h:body>
         <h:form>
             <h:panelGrid columns="2">
-                Instrument Id
-                <h:inputText value="#{instrumentBean.instrumentId}"/>
+          
                 Beskrivning
                 <h:inputText value="#{instrumentBean.beskrivning}"/>
                 Model
@@ -19,7 +18,12 @@
                 <h:inputText value="#{instrumentBean.pris}" />
                 Tillverkare
                 <h:inputText value="#{instrumentBean.tillverkare}" />
-                
+                Image
+                <form method="post" action="Upload"
+                      enctype="multipart/form-data">
+                    Select file to upload: <input type="file" name="file" size="60" /><br />
+                    <br /> <input type="submit" value="Upload" />
+                </form>
                 <h:panelGroup/>
                 <h:commandButton value="Add" 
                                  action="#{controllBean.save()}" />
