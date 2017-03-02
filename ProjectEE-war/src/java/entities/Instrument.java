@@ -49,8 +49,8 @@ public class Instrument implements Serializable {
     @Column(name = "PRIS")
     private Integer pris;
     @Size(max = 255)
-    @Column(name = "IMAGE")
-    private String image;
+    @Column(name = "TIDIGAREAGARE")
+    private String tidigareagare;
 
     public Instrument() {
     }
@@ -99,12 +99,12 @@ public class Instrument implements Serializable {
         this.pris = pris;
     }
 
-    public String getImage() {
-        return image;
+    public String getTidigareAgare() {
+        return tidigareagare;
     }
     
-    public void setImage(String image) {
-        this.image = image;
+    public void setTidigareagare(String tidigareagare) {
+        this.tidigareagare = tidigareagare;
     }
 
     @Override
