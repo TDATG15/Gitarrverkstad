@@ -18,8 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 @WebServlet(urlPatterns={"/uploadServlet"},
-        loadOnStartup = 1,
-        asyncSupported = true,
+ 
         initParams =
                 {
                     // @WebInitParam(name = "saveDir", value = "/home/elementalist/images"),
@@ -33,8 +32,6 @@ import javax.servlet.http.Part;
 public class Upload extends HttpServlet {
     
 //private static final String SAVE_DIR = "images";
-    
-    
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             

@@ -37,7 +37,7 @@ public class ControllBean implements Serializable {
     public String add(){
         
         Instrument e = new Instrument();
-        //e.setInstrumentId(instrumentBean.getInstrumentId());
+        
         e.setBeskrivning(instrumentBean.getBeskrivning());
         e.setModel(instrumentBean.getModel());
         e.setPris(instrumentBean.getPris());
@@ -51,12 +51,12 @@ public class ControllBean implements Serializable {
     
     public String edit(Instrument e){
         
-        //instrumentBean.setInstrumentId(e.getInstrumentId());
+        
         instrumentBean.setBeskrivning(e.getBeskrivning());
         instrumentBean.setModel(e.getModel());
         instrumentBean.setPris(e.getPris());
         instrumentBean.setTillverkare(e.getTillverkare());
-        instrumentBean.setTidigareagare(e.getTidigareAgare());
+        instrumentBean.setTidigareagare(e.getTidigareagare());
         
         return "update";
     }
