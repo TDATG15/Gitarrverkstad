@@ -89,9 +89,11 @@
                     <ui:insert name="right">Right</ui:insert>
                 </div>
              <div id="center" class="dontmesswithprevious">
+                 
+                 
                 
                    
-                    <table class="tables" id="tableA">
+                    <!--<table class="tables" id="tableA">
                         <tr>
                             <th class="header">Vecka 1</th>
                         </tr>
@@ -159,7 +161,7 @@
                             <td class="cells" id="2491718">17 - 18</td>
                             <td class="cells" id="2591718">17 - 18</td>
                         </tr>
-                    </table>
+                    </table>-->
                     <!--<p>Date: <input type="text" id="datepicker"></input></p>-->
                     <input type="button" id="showTableA" value="Vecka 1"></input>
                     <input type="button" id="showTableB" value="Vecka 2"></input>
@@ -179,7 +181,17 @@
                             tableB.style.display = "table";
                         }
                     </script>
-                   
+                    <form action="/kanske.txt" method="write">
+                        First name: <br>
+                            <input type="text" name="firstName"></input>
+                        </br>
+                        Last name: <br>
+                            <input type="text" name="lastName"></input>
+                            </br>
+                        <br>
+                            <input type="submit" value="submit"/>
+                        </br>
+                    </form>
                     
                      <div id="result"> </div>
                     <!--<ui:insert name="content">Boka något!</ui:insert>-->
