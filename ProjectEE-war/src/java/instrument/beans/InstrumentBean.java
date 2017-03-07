@@ -15,8 +15,7 @@ public class InstrumentBean implements Serializable {
     private String beskrivning;
     private Integer pris;
     private String tillverkare;
-    
-    private String image;
+    private String tidigareagare;
     
     public Integer getInstrumentId() {
         return instrumentId;
@@ -58,12 +57,12 @@ public class InstrumentBean implements Serializable {
         this.tillverkare = tillverkare;
     }
     
-    public String getImage() {
-        return image;
+    public String getTidigareagare() {
+        return tidigareagare;
     }
     
-    public void setImage(String image) {
-        this.image = image;
+    public void setTidigareagare(String tidigareagare) {
+        this.tidigareagare = tidigareagare;
     }
     
 }

@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package entities;
 
 import java.io.Serializable;
@@ -16,7 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author elementalist
+ * @author Elementalist
  */
 @Entity
 @Table(name = "INSTRUMENT")
@@ -28,7 +32,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Instrument.findByTillverkare", query = "SELECT i FROM Instrument i WHERE i.tillverkare = :tillverkare")
     , @NamedQuery(name = "Instrument.findByBeskrivning", query = "SELECT i FROM Instrument i WHERE i.beskrivning = :beskrivning")
     , @NamedQuery(name = "Instrument.findByPris", query = "SELECT i FROM Instrument i WHERE i.pris = :pris")
-    , @NamedQuery(name = "Instrument.findByImage", query = "SELECT i FROM Instrument i WHERE i.image = :image")})
+    , @NamedQuery(name = "Instrument.findByTidigareagare", query = "SELECT i FROM Instrument i WHERE i.tidigareagare = :tidigareagare")})
 public class Instrument implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -48,9 +52,9 @@ public class Instrument implements Serializable {
     private String beskrivning;
     @Column(name = "PRIS")
     private Integer pris;
-    @Size(max = 255)
-    @Column(name = "IMAGE")
-    private String image;
+    @Size(max = 32)
+    @Column(name = "TIDIGAREAGARE")
+    private String tidigareagare;
 
     public Instrument() {
     }
@@ -99,12 +103,12 @@ public class Instrument implements Serializable {
         this.pris = pris;
     }
 
-    public String getImage() {
-        return image;
+    public String getTidigareagare() {
+        return tidigareagare;
     }
-    
-    public void setImage(String image) {
-        this.image = image;
+
+    public void setTidigareagare(String tidigareagare) {
+        this.tidigareagare = tidigareagare;
     }
 
     @Override
