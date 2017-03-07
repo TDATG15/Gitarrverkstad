@@ -42,4 +42,32 @@ public class consControl implements Serializable {
         
         return "test";
     }
+    
+    public String edit(Consultation c){
+        
+        consBean.setConDate(c.getConDate());
+        consBean.setConTime(c.getConTime());
+        consBean.setCustName(c.getCustName());
+        consBean.setCustTel(c.getCustTel());
+        
+        
+        return "update";
+    }
+    
+    public String save(){
+        
+        Consultation c = new Consultation(consBean.getConId());
+        
+        c.setConDate(consBean.getConDate());
+        c.setConTime(consBean.getConTime());
+        c.setCustName(consBean.getCustName());
+        c.setCustTel(consBean.getCustTel());
+
+        
+        
+        consultationFacade.edit(c);
+        
+        return "test";
+        
+    }
 }
