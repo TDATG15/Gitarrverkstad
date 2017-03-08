@@ -2,87 +2,115 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-	  xmlns:f="http://java.sun.com/jsf/core"
-	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-	  >
+      >
     <h:head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<h:outputStylesheet name="/css/main.css"/>
-		<h:outputStylesheet name="/css/style.css"/>
-		<title>Anders Gitarrverkstad</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        
+        <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+        <h:outputStylesheet name="/css/main.css"/>
+        <h:outputStylesheet name="/css/style.css"/>
+        <title>Anders Gitarrverkstad</title>
     </h:head>
-    <h:body>
-		
+    <h:body class="bajs">
+        
         <div id="icon_block">	
-			<ul>
-				<!-- Lägger till en bild -->
-				<li><h:graphicImage library="images" name="icon.png"/></li> 
-				<li><h:outputText value="Anders Gitarrverkstad" styleClass="font"/></li>
-			</ul>
+            <ul>
+                <!-- Lägger till en bild -->
+                <li><h:graphicImage library="images" name="icon.png"/></li> 
+                <li><h:outputText value="Anders Gitarrverkstad" styleClass="font"/></li>
+            </ul>
         </div>
-		<!-- Top blocket -->
+        <!-- Top blocket -->
         <div id="top">
-			<h:form>
-				<div class="meny">
-					
-					<div id="information">
-						<h:link value="Information" outcome="info.xhtml"/>
-					</div>
-					<div id="boka">
-						<h:link value="Boka en tid" outcome="bokningar.xhtml"/>
-					</div>	
-					<div id="hem">
-						<h:link value="Hem" outcome="index.xhtml"/>
-					</div>
-                                        <div id="admin">
-						<h:link value="Admin" outcome="config.xhtml"/>
-					</div>
-				</div>
-				
-			</h:form>
+            <h:form>
+                <div class="meny">
+                    
+                    <div id="information">
+                        <h:link value="Information" outcome="info.xhtml"/>
+                    </div>
+                    <div id="boka">
+                        <h:link value="Boka en tid" outcome="bokningar.xhtml"/>
+                    </div>	
+                    <div id="hem">
+                        <h:link value="Hem" outcome="index.xhtml"/>
+                    </div>
+                    <div id="admin">
+                        <h:link value="Admin" outcome="config.xhtml"/>
+                    </div>
+                </div>
+                
+            </h:form>
         </div>
+            
+   
+        
+        
+            <h:form id="guitar-display" >
+                        
+            <div  id="my-slider" class="carousel" data-ride="carousel" data-interval="4000">
+                
+                <div class="carousel-inner" role="listbox" >
+                    <div class="item active">
+                        <h:graphicImage library="images" name="g10.png" width="500" height="500"/>
+                                
+                    </div>
+                            
+                    <div class="item">
+                        <h:graphicImage  library="images" name="g2.png" width="500" height="500"/>
+                    </div>
+                            
+                    <div class="item">
+                        <h:graphicImage  library="images" name="g3.png" width="500" height="500"/>
+                    </div>
+                            
+                    <div class="item">
+                        <h:graphicImage  library="images" name="g4.png" width="500" height="500"/>
+                    </div>
+                            
+                            
+                    <div class="item">
+                        <h:graphicImage  library="images" name="g5.png" width="500" height="500"/>
+                    </div>
+                            
+                    <div class="item">
+                        <h:graphicImage  library="images" name="g6.png" width="500" height="500"/>
+                    </div>
+                            
+                    <div class="item">
+                        <h:graphicImage  library="images" name="g7.png" width="500" height="500"/>
+                    </div>         
+                </div>
+            </div>
+        </h:form>
+                
+                
+                
+                
         <div>
-			<div id="left">
-				<ui:insert name="left">Left</ui:insert>
-            </div>
-            <div>
-                <div id="right">
-                    <ui:insert name="right">Right</ui:insert>
+            
+            <h:form class="center_content">
+                <div>
+                    <h:outputText value="Välkommen till Anders Gitarrverkstad!"/>
                 </div>
-                <div id="content" class="contentformat">
-									
-					<h:inputText value="conent" ></h:inputText>
-					
-					
+                
+                <div>
+                    <br><h:outputText class="tider" value="Öppettider"/></br>
+                    <br><h:outputText class="dagtid" value="Måndag - fredag: 10-18"/></br>
+                    <h:outputText class="dagtid" value="Lördag - söndag: stängt"/>
                 </div>
-				<h:form id="guitar-display">
-					<p:carousel value="/resources/images/" var="product" autoPlayInterval="4000" effect="fade" circular="true" headerText="Gitarrer" style="width: 100%">	
-						<!--  -->
-							<h:panelGrid columns="2" style=" width: 100%" cellpadding="5">
-								<h:outputLink value="DisplayImage?Image_id=gitarr1.jpg" target="_blank" >
-								<p:graphicImage value="/resources/images/gitarr1.jpg" width="50" height="50"/>
-								
-								<h:outputText value="Model: Custom" />  
-								
-								<h:outputText value="k."/>
-								</h:outputLink>
-								
-								<h:outputLink value="DisplayImage?Image_id=gitarr1.jpg" target="_blank" >
-								<p:graphicImage value="/resources/images/gitarr2.jpg" width="50" height="50"/>
-								
-								<h:outputText value="Model: Custom1" />  
-								
-								<h:outputText value="1k."/>  
-								</h:outputLink>
-						
-							</h:panelGrid>  
-						
-						
-					</p:carousel> 
-				</h:form>
-            </div>
+                
+                
+            </h:form>  
+                
+                
         </div>
     </h:body>
 </html>
-
