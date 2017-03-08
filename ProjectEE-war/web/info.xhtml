@@ -4,56 +4,60 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<h:outputStylesheet name="/css/main.css"/>
-		<h:outputStylesheet name="/css/style.css"/>
-		<title>Anders Gitarrverkstad</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/css/main.css"/>
+        <h:outputStylesheet name="/css/style.css"/>
+        <title>Anders Gitarrverkstad</title>
     </h:head>
     <h:body>
         <div id="icon_block">
-			<ul>
-				<!-- Lägger till en bild -->
-				<li><h:graphicImage library="images" name="icon.png"/></li> 
-				
-				<li><h:outputText value="Anders Gitarrverkstad"/></li>
-			</ul>
+            <ul>
+                <!-- Lägger till en bild -->
+                <li><h:graphicImage library="images" name="icon.png"/></li> 
+                
+                <li><h:outputText value="Anders Gitarrverkstad"/></li>
+            </ul>
         </div>
-
+        
         <div id="top">
-			<h:form>
-				<div class="meny">
-					
-					<div id="information">
-						<h:link value="Information" outcome="info.xhtml"/>
-					</div>
-					<div id="boka">
-						<h:link value="Boka en tid" outcome="bokningar.xhtml"/>
-					</div>	
-					<div id="hem">
-						<h:link value="Hem" outcome="index.xhtml"/>
-					</div>
-				</div>
-				
-			</h:form>
+            <h:form>
+                <div class="meny">
+                    
+                    <div id="information">
+                        <h:link value="Information" outcome="info.xhtml"/>
+                    </div>
+                    <div id="boka">
+                        <h:link value="Boka en tid" outcome="bokningar.xhtml"/>
+                    </div>	
+                    <div id="hem">
+                        <h:link value="Hem" outcome="index.xhtml"/>
+                    </div>
+                </div>
+                
+            </h:form>
         </div>
         <div>
-			<div id="left">
-				<ui:insert name="left">Left</ui:insert>
-            </div>
             <div>
-                <div id="right">
-                    <ui:insert name="right">Right</ui:insert>
-                </div>
+                
                 <div id="content" class="contentformat">
-					<!-- <h:outputText value="#{text.text}" styleClass="preformat"/> -->
-				</div>
-               
-            </div>
-             <div id="leftcontent" class="leftcontent">
-                                        <!-- <h:outputText value="#{text.othertext}" styleClass="testing"/> -->
-                                    </div>
-            <div><img src="/resources/images/Andersgatan.png" alt="HAH" class="findme"></img>
+                                        <!-- <h:outputText value="#{text.text}" styleClass="preformat"/> -->
+                    
+                    <br><h:outputText value="Min verkstad hittar du på " /></br>
+                    <h:outputText value="Andersgatan 1"/>
+                    
+                    <br><h:outputText value="111 11 Andersville"/></br>
+                    
+                    <br><h:outputText value="Telefonnummer: 070 777 11 77"/></br>
+                    
+                    
+                    <div>
+                    <h:graphicImage class="mapbild" library="images" name="Andersgatan.png" width="300" height="300"/>
+                    </div>
+                    
                 </div>
+                
+            </div>
+            
         </div>
     </h:body>
 </html>
