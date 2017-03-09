@@ -28,31 +28,25 @@ public class ConsBean implements Serializable {
         this.conDate = conDate;
     }
 
-
     public Date getConTime() {
         return conTime;
     }
-
 
     public void setConTime(Date conTime) {
         this.conTime = conTime;
     }
 
-
     public String getCustName() {
         return custName;
     }
-
 
     public void setCustName(String custName) {
         this.custName = custName;
     }
 
-
     public Long getCustTel() {
         return custTel;
     }
-
 
     public void setCustTel(Long custTel) {
         this.custTel = custTel;
