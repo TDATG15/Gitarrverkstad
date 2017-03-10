@@ -37,7 +37,7 @@ public class ScheduleView implements Serializable {
     private ScheduleModel lazyEventModel;
     private ScheduleEvent event = new DefaultScheduleEvent();
     List<Consultation> myList = new ArrayList<Consultation>();
-    
+    private final boolean allDay=true;
     public List<Consultation> getAll(){
         
         return consultationFacade.findAll();
@@ -53,7 +53,7 @@ public class ScheduleView implements Serializable {
         myList= getAll();
         for(Consultation c: myList){
             
-            eventModel.addEvent(new DefaultScheduleEvent("Bokad",c.getConDate(),c.getConDate()));
+            eventModel.addEvent(new DefaultScheduleEvent("Bokad",c.getConDate(),c.getConDate(), allDay));
             
         }
          
@@ -116,7 +116,7 @@ public class ScheduleView implements Serializable {
             eventModel.updateEvent(event); 
         event = new DefaultScheduleEvent();
         add();
-        event.isAllDay();
+        
     }
      
     public void onEventSelect(SelectEvent selectEvent) {
@@ -124,7 +124,10 @@ public class ScheduleView implements Serializable {
     }
      
     public void onDateSelect(SelectEvent selectEvent) {
+        
         event = new DefaultScheduleEvent("", (Date) selectEvent.getObject(), (Date) selectEvent.getObject());
+          
+        
     }
      
     public void onEventMove(ScheduleEntryMoveEvent event) {
