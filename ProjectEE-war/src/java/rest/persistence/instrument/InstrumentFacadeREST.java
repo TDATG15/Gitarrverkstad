@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package book.service;
+package rest.persistence.instrument;
 
-import entities.Consultation;
+import entities.Instrument;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -25,27 +25,27 @@ import javax.ws.rs.core.MediaType;
  * @author Elementalist
  */
 @Stateless
-@Path("entities.consultation")
-public class ConsultationFacadeREST extends AbstractFacade<Consultation> {
+@Path("entities.instrument")
+public class InstrumentFacadeREST extends AbstractFacade<Instrument> {
 
     @PersistenceContext(unitName = "ProjectEE-warPU")
     private EntityManager em;
 
-    public ConsultationFacadeREST() {
-        super(Consultation.class);
+    public InstrumentFacadeREST() {
+        super(Instrument.class);
     }
 
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public void create(Consultation entity) {
+    public void create(Instrument entity) {
         super.create(entity);
     }
 
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public void edit(@PathParam("id") Integer id, Consultation entity) {
+    public void edit(@PathParam("id") Integer id, Instrument entity) {
         super.edit(entity);
     }
 
@@ -58,21 +58,21 @@ public class ConsultationFacadeREST extends AbstractFacade<Consultation> {
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Consultation find(@PathParam("id") Integer id) {
+    public Instrument find(@PathParam("id") Integer id) {
         return super.find(id);
     }
 
     @GET
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Consultation> findAll() {
+    public List<Instrument> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Consultation> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
+    public List<Instrument> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
 

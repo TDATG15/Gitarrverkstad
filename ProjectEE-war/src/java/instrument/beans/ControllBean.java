@@ -1,6 +1,7 @@
 
 package instrument.beans;
 
+import instrument.persistence.InstrumentFacade;
 import entities.Instrument;
 import javax.inject.Named;
 import java.io.Serializable;

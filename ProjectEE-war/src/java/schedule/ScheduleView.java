@@ -1,7 +1,6 @@
 package schedule;
  
-import book.service.ConsultationFacade;
-import entities.ConsBean;
+import persistence.bokning.ConsultationFacade;
 import entities.Consultation;
 import java.io.Serializable;
 import java.util.ArrayList;

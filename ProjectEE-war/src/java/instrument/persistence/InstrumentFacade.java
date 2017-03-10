@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package instrument.beans;
+package instrument.persistence;
 
 import entities.Instrument;
 import javax.ejb.Stateless;

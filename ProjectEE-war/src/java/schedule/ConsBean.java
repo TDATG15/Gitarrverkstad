@@ -1,5 +1,5 @@
 
-package entities;
+package schedule;
 
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
