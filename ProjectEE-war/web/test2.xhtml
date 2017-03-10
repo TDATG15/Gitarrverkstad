@@ -12,11 +12,12 @@
  
     <h:panelGrid columnClasses="value">
         <h3 style="margin-top: 0">Schedule</h3>
-        <p:schedule id="schedule" value="#{scheduleView.eventModel}" widgetVar="myschedule" timeZone="GMT+2" showWeekends="false" draggable="false">
- 
+        
+        <p:schedule rightHeaderTemplate="month" id="schedule" value="#{scheduleView.eventModel}" allDaySlot="false" widgetVar="myschedule" timeZone="GMT+2" showWeekends="false" draggable="false">
+            
             <p:ajax event="dateSelect" listener="#{scheduleView.onDateSelect}" update="eventDetails" oncomplete="PF('eventDialog').show();" />
             <p:ajax event="eventSelect" listener="#{scheduleView.onEventSelect}" update="eventDetails"/>
-            <p:ajax event="eventResize" listener="#{scheduleView.onEventResize}" update="messages" />
+            <p:ajax event="eventResize" listener="#{scheduleView.onEventResize}" update="messages"  />
  
         </p:schedule>
  
