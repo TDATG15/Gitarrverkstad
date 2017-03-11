@@ -1,68 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" 
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-     <h:head>
-  
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-                <!--<meta name="viewport" content="width=device-width, initial-scale=1"/>-->
-		<h:outputStylesheet name="/css/main.css"/>
-		<h:outputStylesheet name="/css/style2.css"/>
-		<title>Anders Gitarrverkstad</title>
-                <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
-                <link rel="stylesheet" href="/resources/demos/style.css"/>
-                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
-  
-                <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>--><!--The script with the function -->
-                <!--<script>
-                    ( function(){
-                        $("#datepicker").datepicker();
-                    });
-                    </script>-->
-                <javascript></javascript>
-                <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-                <!-- Some JQuery stuff-->
-                <script>
-                $(document).ready(function(){
-                $("#TheTable th, td").click(function(){
-                    var columnNo = parseInt($(this).index() ) + 1; 
-                    var rowNo = parseInt( $(this).parent().index() ) +1;
-                    $("#result").html("Row : " + rowNo +", Column: " + columnNo);
-                });
-            });
-           
-                    </script>
-                <!-- End of JQuery -->
-               <!--  <script>
-               function  clickCell(c){
-                   var targ;
-                   if (!c){
-                       var c = window.event;
-                   }
-                   if (c.target){
-                       targ=c.target;
-                   }
-                   else if (c.srcElement){
-                       targ=c.srcElement;
-                       }
-                   var tname;
-                   tname = targ.tagName;
-                   alert("you clicked on a" + tname + "element.");
-               }
-                   
-               </script>-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet name="/css/main.css"/>
+        <h:outputStylesheet name="/css/style.css"/>
+        <title>Boka En Tid</title>
     </h:head>
-    <h:body onmousedown="clickCell(event)">
-        <div id="icon_block">
-			<ul>
-				<!-- Lägger till en bild -->
-				<li><h:graphicImage library="images" name="icon.png"/></li> 
-					
-				<li><h:outputText value="Anders Gitarrverkstad"/></li>
-			</ul>
+    <h:body>
+         <div id="icon_block">
+            <ul>
+                <!-- Lägger till en bild -->
+                <li><h:graphicImage library="images" name="icon.png"/></li> 
+                
+                <li><h:outputText value="Anders Gitarrverkstad"/></li>
+            </ul>
         </div>
-		
         <div id="top">
 			<h:form>
 				<div class="meny">
@@ -80,157 +34,56 @@
 				
 			</h:form>
         </div>
-        <div>
-			<div id="left">
-				<ui:insert name="left">Left</ui:insert>
-            </div>
-           
-                <div id="right">
-                    <ui:insert name="right">Right</ui:insert>
-                </div>
-             <div id="center" class="dontmesswithprevious">
-                 
-                 
-                
-                   
-                    <!--<table class="tables" id="tableA">
-                        <tr>
-                            <th class="header">Vecka 1</th>
-                        </tr>
-                        <tr>
-                            <th class="header">Måndag 14/9</th>
-                            <th class="header">Tisdag 15/9</th>
-                            <th class="header">Onsdag 16/9</th>
-                            <th class="header">Torsdag 17/9</th>
-                            <th class="header">Fredag 18/9</th>
-                        </tr>
-                        <tr>
-                            <td class="cells" id="1491112">11 - 12</td>
-                            <td class="cells" id="1591112">
-                                <a href="resources/images/gitarr1.jpg">11 - 12</a></td>
-                            <td class="cells" id="1691112">11 - 12</td>
-                            <td class="cells" id="1791112">11 - 12</td>
-                            <td class="cells" id="1891112">11 - 12</td>
-                        </tr>
-                        <tr>
-                            <td class="cells" id="1491516">15 - 16</td>
-                            <td class="cells" id="1591516">15 - 16</td>
-                            <td class="cells" id="1691516">15 - 16</td>
-                            <td class="cells" id="1791516">15 - 16</td>
-                            <td class="cells" id="1891516">15 - 16</td>
-                        </tr>
-                        <tr>
-                            <td class="cells" id="1491718">17 - 18</td>
-                            <td class="cells" id="1591718">17 - 18</td>
-                            <td class="cells" id="1691718">17 - 18</td>
-                            <td class="cells" id="1791718">17 - 18</td>
-                            <td class="cells" id="1891718">17 - 18</td>
-                        </tr>
-                    </table>
-                    
-                    <table class="tables" id="tableB" style="display:none">
-                        <tr>
-                            <th class="header">Vecka 2</th>
-                        </tr>
-                        <tr>
-                            <th class="header">Måndag 21/9</th>
-                            <th class="header">Tisdag 22/9</th>
-                            <th class="header">Onsdag 23/9</th>
-                            <th class="header">Torsdag 24/9</th>
-                            <th class="header">Fredag 25/9</th>
-                        </tr>
-                        <tr>
-                            <td class="cells" id="2191112">11 - 12</td>
-                            <td class="cells" id="2291112">
-                                <a href="resources/images/gitarr2.jpg">11 - 12</a></td>
-                            <td class="cells" id="2391112">11 - 12</td>
-                            <td class="cells" id="2491112">11 - 12</td>
-                            <td class="cells" id="2591112">11 - 12</td>
-                        </tr>
-                        <tr>
-                            <td class="cells" id="2191516">15 - 16</td>
-                            <td class="cells" id="2291516">15 - 16</td>
-                            <td class="cells" id="2391516">15 - 16</td>
-                            <td class="cells" id="2491516">15 - 16</td>
-                            <td class="cells" id="2591516">15 - 16</td>
-                        </tr>
-                        <tr>
-                            <td class="cells" id="2191718">17 - 18</td>
-                            <td class="cells" id="2291718">17 - 18</td>
-                            <td class="cells" id="2391718">17 - 18</td>
-                            <td class="cells" id="2491718">17 - 18</td>
-                            <td class="cells" id="2591718">17 - 18</td>
-                        </tr>
-                    </table>-->
-                    <!--<p>Date: <input type="text" id="datepicker"></input></p>-->
-                    <input type="button" id="showTableA" value="Vecka 1"></input>
-                    <input type="button" id="showTableB" value="Vecka 2"></input>
-                    <script type="text/javascript">
-                        var tableA = document.getElementById("tableA");
-                        var tableB = document.getElementById("tableB");
-                        
-                        var btnTabA = document.getElementById("showTableA");
-                        var btnTabB = document.getElementById("showTableB");
-                        
-                        btnTabA.onclick = function(){
-                            tableA.style.display ="table";
-                            tableB.style.display ="none";
-                        }
-                        btnTabB.onclick = function (){
-                            tableA.style.display = "none";
-                            tableB.style.display = "table";
-                        }
-                    </script>
-                    <form action="/kansk.txt" method="write">
-                        First name: <br>
-                            <input type="text" name="firstName"></input>
-                        </br>
-                        Last name: <br>
-                            <input type="text" name="lastName"></input>
-                            </br>
-                        <br>
-                            <input type="submit" value="submit"/>
-                        </br>
-                    </form>
-                    
-                     <div id="result"> </div>
-                    <!--<ui:insert name="content">Boka något!</ui:insert>-->
-                   
-                
-            </div>
+<div> 
+    <div id="center" class="contentformat">
+        <h:form>
+            <p:growl id="messages" showDetail="true" />
+ 
+            <h:panelGrid  columnClasses="value">
+                <h3 style="margin-top: 0">Schedule</h3>
+        
+                <p:schedule rightHeaderTemplate="month" id="schedule" value="#{scheduleView.eventModel}" allDaySlot="false" widgetVar="myschedule" timeZone="GMT+2" showWeekends="false" draggable="false">
             
-        </div>
-           <button onclick="printHello()">Boka något!</button>
-           <button onclick="printTable()">Skriv ut tabell!</button>
-           <script>
-               function printHello(){
-                   var click =document.getElementById("1491112");
-                   click.innerHTML = "HELLO";
-                   
-               }
-               /*function printHello(){
-                   var click =document.getElementById("p1"); #Backup function
-                   click.innerHTML = "HELLO!"
-               }*/
-             </script>
-           <script>
-               function printTable(){
-                   var divToPrint=document.getElementById("theTable");
-                   newWin= window.open("");
-                   newWin.document.write(divToPrint.outerHTML);
-                   /*newWin.print();  #prints with an actual printer*/
-                   /*newWin.close();*/
-               
-               /*function printTable(){
-                   var divToPrint=document.getElementById("theTable");
-                   newWin= window.open("");
-                   newWin.document.write(divToPrint.outerHTML); #Backup function
-                   /*newWin.print();  #prints with an actual printer*/
-                   /*newWin.close();*/
-                   
-               }
-           </script>
-          
+                    <p:ajax id="callDate" event="dateSelect" listener="#{scheduleView.onDateSelect}" update="eventDetails" oncomplete="PF('eventDialog').show();" />
+                    <p:ajax event="eventSelect" listener="#{scheduleView.onEventSelect}" update="eventDetails"/>
+                    <p:ajax event="eventResize" listener="#{scheduleView.onEventResize}" update="messages"  />
+ 
+                </p:schedule>
+ 
+      
+            </h:panelGrid>
+    
+ 
+            <p:dialog id="getDate" widgetVar="eventDialog" header="Event Details" showEffect="clip" hideEffect="clip">
+                <h:panelGrid id="eventDetails" columns="2">
+                    <p:outputLabel for="custName" value="Name:" />
+                    <p:inputText id="custName" value="#{consBean.custName}" required="true" />
+ 
+                    <p:outputLabel for="conDate" value="Datum:" />
+                    <p:calendar  id="conDate" value="#{consBean.conDate}" timeZone="GMT+2" pattern="dd/MM/yyyy"/>
+            
+                    <p:outputLabel for="conTime" value="Time:" />
+                    <p:calendar id="conTime" value="#{consBean.conTime}" pattern="HH:mm" minHour="10" maxHour="10" minMinute="00" maxMinute="00" timeOnly="true"/>
+            
+                    <p:outputLabel for="custTel" value="Telefon:" />
+                    <p:inputText id="custTel" value="#{consBean.custTel}" />
+ 
+ 
+                    <p:commandButton type="reset" value="Reset" />
+                    <p:commandButton id="addButton" value="Save" actionListener="#{scheduleView.addEvent}" oncomplete="PF('myschedule').update();PF('eventDialog').hide();" />
+                </h:panelGrid>
+            </p:dialog>    
+        </h:form>
+    </div>    
+</div>
+ 
+ 
+
+<style type="text/css">
+    .value {
+        width: 1000px;
+    }
+</style>
     </h:body>
 </html>
 
