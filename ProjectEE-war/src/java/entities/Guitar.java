@@ -52,73 +52,59 @@ public class Guitar implements Serializable {
     private String prvowner;
     @Lob
     @Column(name = "IMG")
-    private Serializable img;
+    private byte[] img;
+   
     
     public Guitar(){
         
     }
-
-    public Guitar(Integer gid){
-        
-        this.gid=gid;
+    public Guitar(Integer gid) {
+        this.gid = gid;
     }
-    
     public Integer getGid() {
         return gid;
     }
-
     public void setGid(Integer gid) {
         this.gid = gid;
     }
-
     public String getModel() {
         return model;
     }
-
     public void setModel(String model) {
         this.model = model;
     }
-
     public Integer getPrice() {
         return price;
     }
-
     public void setPrice(Integer price) {
         this.price = price;
     }
-
     public String getManf() {
         return manf;
     }
-
     public void setManf(String manf) {
         this.manf = manf;
     }
-
     public String getDescr() {
         return descr;
     }
-
     public void setDescr(String descr) {
         this.descr = descr;
     }
-
     public String getPrvowner() {
         return prvowner;
     }
-
     public void setPrvowner(String prvowner) {
         this.prvowner = prvowner;
     }
-
-    public Serializable getImg() {
+    public byte[] getImg() {
         return img;
     }
-
-    public void setImg(Serializable img) {
+    public void setImg(byte[] img) {
         this.img = img;
     }
-
+    
+    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -143,5 +129,6 @@ public class Guitar implements Serializable {
     public String toString() {
         return "beans.Guitar[ gid=" + gid + " ]";
     }
+    
     
 }
