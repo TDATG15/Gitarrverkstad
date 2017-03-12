@@ -1,31 +1,33 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:p="http://primefaces.org/ui"
+   xmlns:f="http://java.sun.com/jsf/core"
+   >
     <h:head>
-        <title>Facelet Title</title>
+        <title>Edit</title>
+        
     </h:head>
     <h:body>
-        <h:form>
-            <h:panelGrid columns="2">
-                
-                Beskrivning
-                <h:inputText value="#{instrumentBean.beskrivning}"/>  
+            <h:form>  
+            <p:panelGrid columns="2">    
                 Model
-                <h:inputText value="#{instrumentBean.model}" />
-                Pris
-                <h:inputText value="#{instrumentBean.pris}" />
-                Tillverkare
-                <h:inputText value="#{instrumentBean.tillverkare}" />
-                Image
-                <h:inputText value="#{instrumentBean.image}" />
-                <h:panelGroup/>
-                <h:commandButton value="Save" 
-                                 action="#{controllBean.save()}" />
-            </h:panelGrid>
-        </h:form>
-
+                <h:inputText value="#{guitarBean.model}"/>  
+                Price
+                <h:inputText value="#{guitarBean.price}"/>
+                Manufacturer
+                <h:inputText value="#{guitarBean.manf}"/>
+                Description
+                <h:inputText value="#{guitarBean.descr}"/>
+                Previous Owner
+                <h:inputText value="#{guitarBean.prvowner}"/>
+                <f:facet name="footer">
+                    <h:commandButton value="Save"  action="#{crudBean.save()}"/>
+                </f:facet>    
+            </p:panelGrid>
+        </h:form>      
+        
     </h:body>
 </html>
-
