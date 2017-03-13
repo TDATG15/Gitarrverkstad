@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:p="http://primefaces.org/ui"
+   xmlns:f="http://java.sun.com/jsf/core"
+   >
+    <h:head>
+        <title>Galleria</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+         <h:form>
+            <p:dataTable value="#{crudBean.all}" var="item" paginator="true" rows="7"
+                      paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                      tableStyle="table-layout: auto;">          
+                <f:facet name="header">
+                        <h:outputText value="Guitarlista" />
+                    </f:facet>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Id" />
+                    </f:facet>
+                    <h:outputText value="#{item.gid}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Model" />
+                    </f:facet>
+                    <h:outputText value="#{item.model}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Pris" />
+                    </f:facet>
+                    <h:outputText value="#{item.price}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Tillverkare" />
+                    </f:facet>
+                    <h:outputText value="#{item.manf}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Beskrivning" />
+                    </f:facet>
+                    <h:outputText value="#{item.descr}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Tidigare Ägare" />
+                    </f:facet>
+                    <h:outputText value="#{item.prvowner}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Bild" />
+                    </f:facet>
+                    <h:outputLink value="DisplayImage?gid=#{item.gid}" target="_blank" >
+                        <h:graphicImage value="DisplayImage?gid=#{item.gid}" width="50" height="50"></h:graphicImage>
+                    </h:outputLink>
+                </p:column>
+                </p:dataTable>
+       </h:form>
+                    
+    </h:body>
+</html>
