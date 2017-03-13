@@ -26,7 +26,7 @@
                 <p:fileUpload fileUploadListener="#{addBean.handleFileUpload}" mode="advanced" allowTypes="/(\.|\/)(gif|jpe?g|png)$/" sizeLimit="1000000"  />
                 
                 <f:facet name="footer">
-                    <p:commandButton value="Submit" ajax="false" actionListener="#{addBean.store()}" />
+                    <p:commandButton  action="config?faces-redirect=true" ajax="false" actionListener="#{addBean.store()}" />
                 </f:facet>    
             </p:panelGrid>
         </h:form>
