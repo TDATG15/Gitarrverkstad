@@ -30,12 +30,11 @@
         </div>
         <!-- Top blocket -->
         <div id="top">
-                <div id="meny">
+            <h:form>
+                <div class="meny">
+                    
                     <div id="information">
                         <h:link value="Information" outcome="info.xhtml"/>
-                    </div>
-					<div id="galleri">
-                        <h:link value="Galleri" outcome="galleri.xhtml"/>
                     </div>
                     <div id="boka">
                         <h:link value="Boka en tid" outcome="bokningar.xhtml"/>
@@ -44,11 +43,19 @@
                         <h:link value="Hem" outcome="index.xhtml"/>
                     </div>
                     <div id="admin">
+                        <h:link value="Galleria" outcome="galleri.xhtml"/>
+                    </div>
+                    <div id="admin">
                         <h:link value="Admin" outcome="login.xhtml"/>
                     </div>
                 </div>
+                
+            </h:form>
         </div>
-
+            
+   
+        
+        
             <h:form id="guitar-display" >
                         
             <div  id="my-slider" class="carousel" data-ride="carousel" data-interval="4000">
