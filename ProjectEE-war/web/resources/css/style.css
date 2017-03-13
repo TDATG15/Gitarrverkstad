@@ -37,7 +37,7 @@
     font-size: larger;
 }
 
-.meny {
+#meny {
     width: 100%;
     overflow: hidden;
 }
@@ -46,7 +46,10 @@
     width: 50px;
     float: right;
 }
-
+#galleri {
+	width: 60px;
+	float:right;
+}
 #boka {
     width: 96px;
     float: right;
