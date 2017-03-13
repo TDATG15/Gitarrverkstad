@@ -22,11 +22,11 @@
                 <h:inputText value="#{addBean.descr}"/>
                 Tidigare ägare
                 <h:inputText value="#{addBean.prvowner}"/>
-                <h:outputLabel value="Select Image: *" />
+                <h:outputLabel value="Välj en bild: *" />
                 <p:fileUpload fileUploadListener="#{addBean.handleFileUpload}" mode="advanced" allowTypes="/(\.|\/)(gif|jpe?g|png)$/" sizeLimit="1000000"  />
                 
                 <f:facet name="footer">
-                    <p:commandButton  action="config?faces-redirect=true" ajax="false" actionListener="#{addBean.store()}" />
+                    <p:commandButton value="Spara" action="config?faces-redirect=true" ajax="false" actionListener="#{addBean.store()}" />
                 </f:facet>    
             </p:panelGrid>
         </h:form>
