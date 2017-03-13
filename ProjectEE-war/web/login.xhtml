@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>login</title>
+    </h:head>
+    <h:body>
+        <h:form id="loginForm">
+    
+            <p:growl id="msg" showDetail="true" life="3000" />
+            <p:panel header="Login" style="width: 360px;">
+ 
+                <h:panelGrid id="loginPanel" columns="2">
+ 
+                    <h:outputText value="Användarnamn" />
+                    <p:inputText id="username" value="#{userLoginBean.username}" ></p:inputText>
+                    <p:spacer></p:spacer>
+                    <p:message for="Losenord" ></p:message>
+                    <h:outputText value="Password" />
+                    <p:password id="password" value="#{userLoginBean.password}"  feedback="false"></p:password>
+                    <p:spacer></p:spacer>
+                    <p:message for="password"></p:message>
+                    <p:spacer></p:spacer>
+                    <p:commandButton action="#{userLoginBean.loginPr()}" value="Logga in" update="loginForm" ajax="true"></p:commandButton>
+ 
+                </h:panelGrid>
+ 
+            </p:panel>
+ 
+        </h:form>
+ 
+    </h:body> 
+ 
+</html>
