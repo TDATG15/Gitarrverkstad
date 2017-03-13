@@ -13,55 +13,53 @@
         <div id="icon_block">
             <ul>
                 <li><h:graphicImage library="images" name="icon.png"/></li> 
-				
+                
                 <li><h:outputText value="Anders Gitarrverkstad"/></li>
             </ul>
         </div>
-		
+        
         <div id="top">
-			<div id="meny">
-				<div id="information">
-					<h:link value="Information" outcome="info.xhtml"/>
-				</div>
-				<div id="galleri">
-					<h:link value="Galleri" outcome="galleri.xhtml"/>
-				</div>
-				<div id="boka">
-					<h:link value="Boka en tid" outcome="bokningar.xhtml"/>
-				</div>	
-				<div id="hem">
-					<h:link value="Hem" outcome="index.xhtml"/>
-				</div>
-				<div id="admin">
-					<h:link value="Admin" outcome="login.xhtml"/>
-				</div>
-			</div>
+            <h:form>
+                <div class="meny">
+                    
+                    <div id="information">
+                        <h:link value="Information" outcome="info.xhtml"/>
+                    </div>
+                    <div id="boka">
+                        <h:link value="Boka en tid" outcome="bokningar.xhtml"/>
+                    </div>	
+                    <div id="hem">
+                        <h:link value="Hem" outcome="index.xhtml"/>
+                    </div>
+                </div>
+                
+            </h:form>
         </div>
         <div>
             <div>
-				
+                
                 <div id="content" class="contentformat">
                                         <!-- <h:outputText value="#{text.text}" styleClass="preformat"/> -->
-					
+                    
                     <br><h:outputText value="Min verkstad hittar du på " /></br>
                     <h:outputText value="Andersgatan 1"/>
-					
+                    
                     <br><h:outputText value="111 11 Andersville"/></br>
-					
+                    
                     <br><h:outputText value="Telefonnummer: 070 777 11 77"/></br>
-					
-					
+                    
+                    
                     <div>
                         <a href="https://www.google.se/maps/place/Andersgatan+1,+215+67+Malm%C3%B6/@55.5750346,12.99547,17z/data=!3m1!4b1!4m5!3m4!1s0x4653a13963b6102d:0xe6bab9a87efd119b!8m2!3d55.5750346!4d12.9976587">
-							<h:graphicImage id="Andersgatan" class="mapbild" library="images" name="Andersgatan.png" width="300" height="300"/>
+                               <h:graphicImage id="Andersgatan" class="mapbild" library="images" name="Andersgatan.png" width="300" height="300"/>
                         </a>
-						
+                    
                     </div>
-					
+                    
                 </div>
-				
+                
             </div>
-			
+            
         </div>
     </h:body>
 </html>
