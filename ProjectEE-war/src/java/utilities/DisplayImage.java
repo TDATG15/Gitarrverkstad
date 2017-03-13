@@ -33,7 +33,7 @@ public class DisplayImage extends HttpServlet {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             String url="jdbc:derby://192.168.1.2:1527/sample;user=app;password=app;";
             Connection con = DriverManager.getConnection(url);
-            //con.setAutoCommit(false);
+            con.setAutoCommit(false);
             stmt = con.createStatement();
             
             String strSql = "select img from guitar where gid=" + Integer.parseInt(idString);
@@ -51,7 +51,7 @@ public class DisplayImage extends HttpServlet {
                             write(bytearray, 0, size);
                 }
             }
-            //con.commit();
+            con.commit();
             }   catch (IOException | ClassNotFoundException | SQLException e) {
         }
     }
