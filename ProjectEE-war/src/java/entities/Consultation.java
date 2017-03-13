@@ -52,8 +52,9 @@ public class Consultation implements Serializable {
     @Size(max = 32)
     @Column(name = "CUST_NAME")
     private String custName;
+    @Size(max = 10)
     @Column(name = "CUST_TEL")
-    private Long custTel;
+    private String custTel;
 
     public Consultation() {
     }
@@ -94,11 +95,11 @@ public class Consultation implements Serializable {
         this.custName = custName;
     }
 
-    public Long getCustTel() {
+    public String getCustTel() {
         return custTel;
     }
 
-    public void setCustTel(Long custTel) {
+    public void setCustTel(String custTel) {
         this.custTel = custTel;
     }
 
