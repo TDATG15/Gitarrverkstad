@@ -29,8 +29,8 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(persistence.bokning.service.ConsultationFacadeREST.class);
-        resources.add(persistence.bokning.service.EventFacadeREST.class);
+        resources.add(rest.persistence.bokning.service.ConsultationFacadeREST.class);
+        resources.add(rest.persistence.bokning.service.EventFacadeREST.class);
         resources.add(rest.persistence.instrument.InstrumentFacadeREST.class);
     }
     
