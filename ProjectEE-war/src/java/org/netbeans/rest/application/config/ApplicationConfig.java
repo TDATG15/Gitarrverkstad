@@ -18,6 +18,7 @@ public class ApplicationConfig extends Application {
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(rest.persistence.bokning.service.ConsultationFacadeREST.class);
         resources.add(rest.persistence.bokning.service.EventFacadeREST.class);
+        resources.add(rest.persistence.guitar.service.GuitarFacadeREST.class);
         resources.add(rest.persistence.instrument.InstrumentFacadeREST.class);
     }
     
