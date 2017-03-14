@@ -35,7 +35,9 @@
         </div>
         
         <p:spacer height="20"></p:spacer>
+        <p:growl id="messages" showDetail="true" />
         <h:form>
+            <p:growl id="messages" showDetail="true" />
             <p:dataTable value="#{crudBean.all}" class="formHeader" var="item" rows="7">          
                         <h:outputText value="Guitarlista"/>
                  <p:column>
@@ -101,7 +103,8 @@
                 <p:commandButton action="add?faces-redirect=true" value="Lägga till ny"/>
         </h:form>
         <p:spacer height="30"></p:spacer>
-        <h:form>    
+        <h:form> 
+                
                 <p:commandButton action="index?faces-redirect=true" value="Logga Ut"/>
         </h:form>
     </h:body>
