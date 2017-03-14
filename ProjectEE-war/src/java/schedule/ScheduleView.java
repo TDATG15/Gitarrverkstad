@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
@@ -49,16 +48,14 @@ public class ScheduleView implements Serializable {
     public void init() {
         
         lazyEventModel = new DefaultScheduleModel();
-        //lazyEventModel = new LazyScheduleModel();
+       
         scheduleList = getAll();
         for(Consultation c: scheduleList){
             
             lazyEventModel.addEvent(new DefaultScheduleEvent("Bokad",c.getConDate(),c.getConDate()));
             
         }
-        TimeZone time = TimeZone.getDefault();
-        System.out.print(time.getID());
-        
+          
 
     }
     
