@@ -7,19 +7,19 @@
       xmlns:p="http://primefaces.org/ui"
       >
     <h:head>
-        
+		
         <meta name="viewport" content="width=device-width, initial-scale=1, text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-        
+		
+		
         <h:outputStylesheet name="/css/main.css"/>
         <h:outputStylesheet name="/css/style.css"/>
         <title>Anders Gitarrverkstad</title>
     </h:head>
     <h:body class="bajs">
-        
+		
         <div id="icon_block">	
             <ul>
                 <li><h:graphicImage library="images" name="icon.png"/></li> 
@@ -28,86 +28,86 @@
         </div>
         <!-- Top blocket -->
         <div id="top">
-                <div class="meny">
-                    <div id="information">
-                        <h:link value="Information" outcome="info.xhtml"/>
-                    </div>
-                    <div id="boka">
-                        <h:link value="Boka en tid" outcome="bokningar.xhtml"/>
-                    </div>	
-                    <div id="hem">
-                        <h:link value="Hem" outcome="index.xhtml"/>
-                    </div>
-                    <div id="admin">
-                        <h:link value="Galleria" outcome="galleri.xhtml"/>
-                    </div>
-                    <div id="admin">
-                        <h:link value="Admin" outcome="login.xhtml"/>
-                    </div>
-                </div>
+			<div class="meny">
+				<div id="information">
+					<h:link value="Information" outcome="info.xhtml"/>
+				</div>
+				<div id="galleri">
+					<h:link value="Galleri" outcome="galleri.xhtml"/>
+				</div>
+				<div id="boka">
+					<h:link value="Boka en tid" outcome="bokningar.xhtml"/>
+				</div>	
+				<div id="hem">
+					<h:link value="Hem" outcome="index.xhtml"/>
+				</div>
+				<div id="admin">
+					<h:link value="Admin" outcome="login.xhtml"/>
+				</div>
+			</div>
         </div>
-            
-   
-        
-        
-            <h:form id="guitar-display" >
-                        
+		
+		
+		
+		
+		<h:form id="guitar-display" >
+			
             <div  id="my-slider" class="carousel" data-ride="carousel" data-interval="4000">
-                
+				
                 <div class="carousel-inner" role="listbox" >
                     <div class="item active">
                         <h:graphicImage library="images" name="g10.png" width="500" height="500"/>
-                                
+						
                     </div>
-                            
+					
                     <div class="item">
                         <h:graphicImage  library="images" name="g2.png" width="500" height="500"/>
                     </div>
-                            
+					
                     <div class="item">
                         <h:graphicImage  library="images" name="g3.png" width="500" height="500"/>
                     </div>
-                            
+					
                     <div class="item">
                         <h:graphicImage  library="images" name="g4.png" width="500" height="500"/>
                     </div>
-                            
-                            
+					
+					
                     <div class="item">
                         <h:graphicImage  library="images" name="g5.png" width="500" height="500"/>
                     </div>
-                            
+					
                     <div class="item">
                         <h:graphicImage  library="images" name="g6.png" width="500" height="500"/>
                     </div>
-                            
+					
                     <div class="item">
                         <h:graphicImage  library="images" name="g7.png" width="500" height="500"/>
                     </div>         
                 </div>
             </div>
         </h:form>
-                
-                
-                
-                
+		
+		
+		
+		
         <div>
-            
+			
             <h:form class="center_content">
                 <div>
                     <h:outputText value="Välkommen till Anders Gitarrverkstad!"/>
                 </div>
-                
+				
                 <div>
                     <br><h:outputText class="tider" value="Öppettider"/></br>
                     <br><h:outputText class="dagtid" value="Måndag - fredag: 10-18"/></br>
                     <h:outputText class="dagtid" value="Lördag - söndag: stängt"/>
                 </div>
-                
-                
+				
+				
             </h:form>  
-                
-                
+			
+			
         </div>
     </h:body>
 </html>
