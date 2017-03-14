@@ -69,7 +69,6 @@ public class CrudBean implements Serializable {
         guitarFacade.edit(g);
         return "config"; 
     }
-    
-    
+        
     
 }

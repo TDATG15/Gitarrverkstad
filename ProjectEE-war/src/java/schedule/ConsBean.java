@@ -7,10 +7,6 @@ import java.util.Date;
 import javax.enterprise.context.SessionScoped;
 
 
-
-
-
-
 @Named(value = "consBean")
 @SessionScoped
 public class ConsBean implements Serializable {
@@ -51,7 +47,5 @@ public class ConsBean implements Serializable {
     public void setCustTel(String custTel) {
         this.custTel = custTel;
     }
-    
-    
-    
+     
 }

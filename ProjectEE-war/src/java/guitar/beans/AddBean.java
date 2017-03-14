@@ -18,7 +18,6 @@ import org.primefaces.model.UploadedFile;
 public class AddBean implements Serializable{
  
     
-   
     private Integer gid;
     private String model;
     private Integer price;

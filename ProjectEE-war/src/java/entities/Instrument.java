@@ -16,10 +16,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author Elementalist
- */
+
 @Entity
 @Table(name = "INSTRUMENT")
 @XmlRootElement
@@ -35,7 +32,6 @@ public class Instrument implements Serializable {
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "instrument")
     
-
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,55 +55,42 @@ public class Instrument implements Serializable {
 
     public Instrument() {
     }
-
     public Instrument(Integer instrumentId) {
         this.instrumentId = instrumentId;
     }
-
     public Integer getInstrumentId() {
         return instrumentId;
     }
-
     public void setInstrumentId(Integer instrumentId) {
         this.instrumentId = instrumentId;
     }
-
     public String getModel() {
         return model;
     }
-
     public void setModel(String model) {
         this.model = model;
     }
-
     public String getTillverkare() {
         return tillverkare;
     }
-
     public void setTillverkare(String tillverkare) {
         this.tillverkare = tillverkare;
     }
-
     public String getBeskrivning() {
         return beskrivning;
     }
-
     public void setBeskrivning(String beskrivning) {
         this.beskrivning = beskrivning;
     }
-
     public Integer getPris() {
         return pris;
     }
-
     public void setPris(Integer pris) {
         this.pris = pris;
     }
-
     public String getTidigareagare() {
         return tidigareagare;
     }
-
     public void setTidigareagare(String tidigareagare) {
         this.tidigareagare = tidigareagare;
     }
@@ -118,10 +101,9 @@ public class Instrument implements Serializable {
         hash += (instrumentId != null ? instrumentId.hashCode() : 0);
         return hash;
     }
-
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
+       
         if (!(object instanceof Instrument)) {
             return false;
         }
@@ -131,7 +113,6 @@ public class Instrument implements Serializable {
         }
         return true;
     }
-
     @Override
     public String toString() {
         return "entities.Instrument[ instrumentId=" + instrumentId + " ]";

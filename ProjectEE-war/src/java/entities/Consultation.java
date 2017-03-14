@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package entities;
 
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,10 +17,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author Elementalist
- */
+
 @Entity
 @Table(name = "CONSULTATION")
 @XmlRootElement
@@ -59,47 +51,36 @@ public class Consultation implements Serializable {
 
     public Consultation() {
     }
-
     public Consultation(Integer conId) {
         this.conId = conId;
     }
-
     public Integer getConId() {
         return conId;
     }
-
     public void setConId(Integer conId) {
         this.conId = conId;
     }
-
     public Date getConDate() {
         return conDate;
     }
-
     public void setConDate(Date conDate) {
         this.conDate = conDate;
     }
-
     public Date getConTime() {
         return conTime;
     }
-
     public void setConTime(Date conTime) {
         this.conTime = conTime;
     }
-
     public String getCustName() {
         return custName;
     }
-
     public void setCustName(String custName) {
         this.custName = custName;
     }
-
     public String getCustTel() {
         return custTel;
     }
-
     public void setCustTel(String custTel) {
         this.custTel = custTel;
     }
@@ -110,7 +91,6 @@ public class Consultation implements Serializable {
         hash += (conId != null ? conId.hashCode() : 0);
         return hash;
     }
-
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
@@ -123,7 +103,6 @@ public class Consultation implements Serializable {
         }
         return true;
     }
-
     @Override
     public String toString() {
         return "entities.Consultation[ conId=" + conId + " ]";

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package rest.persistence.instrument;
 
 import entities.Instrument;
@@ -20,10 +16,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-/**
- *
- * @author Elementalist
- */
+
 @Stateless
 @Path("entities.instrument")
 public class InstrumentFacadeREST extends AbstractFacade<Instrument> {

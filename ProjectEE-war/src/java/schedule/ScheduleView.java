@@ -35,7 +35,6 @@ public class ScheduleView implements Serializable {
     
     private ScheduleModel lazyEventModel;
     private ScheduleEvent event = new DefaultScheduleEvent();
-    
     List<Consultation> scheduleList = new ArrayList<Consultation>();
     public List<Consultation> getAll(){
         
@@ -43,7 +42,6 @@ public class ScheduleView implements Serializable {
     }
     
     @PostConstruct
-    
     
     public void init() {
         
@@ -58,7 +56,6 @@ public class ScheduleView implements Serializable {
           
 
     }
-    
     public Date getRandomDate(Date base) {
         Calendar date = Calendar.getInstance();
         date.setTime(base);

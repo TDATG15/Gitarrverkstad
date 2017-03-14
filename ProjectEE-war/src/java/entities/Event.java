@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package entities;
 
 import java.io.Serializable;
@@ -21,10 +17,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author Elementalist
- */
+
 @Entity
 @Table(name = "EVENT")
 @XmlRootElement
@@ -68,71 +61,54 @@ public class Event implements Serializable {
 
     public Event() {
     }
-
     public Event(Integer eventId) {
         this.eventId = eventId;
     }
-
     public Integer getEventId() {
         return eventId;
     }
-
     public void setEventId(Integer eventId) {
         this.eventId = eventId;
     }
-
     public String getCustName() {
         return custName;
     }
-
     public void setCustName(String custName) {
         this.custName = custName;
     }
-
     public Long getCustTel() {
         return custTel;
     }
-
     public void setCustTel(Long custTel) {
         this.custTel = custTel;
     }
-
     public String getCustMail() {
         return custMail;
     }
-
     public void setCustMail(String custMail) {
         this.custMail = custMail;
     }
-
     public String getDescr() {
         return descr;
     }
-
     public void setDescr(String descr) {
         this.descr = descr;
     }
-
     public Date getArrDate() {
         return arrDate;
     }
-
     public void setArrDate(Date arrDate) {
         this.arrDate = arrDate;
     }
-
     public Integer getDuration() {
         return duration;
     }
-
     public void setDuration(Integer duration) {
         this.duration = duration;
     }
-
     public Date getArrTid() {
         return arrTid;
     }
-
     public void setArrTid(Date arrTid) {
         this.arrTid = arrTid;
     }
@@ -143,10 +119,9 @@ public class Event implements Serializable {
         hash += (eventId != null ? eventId.hashCode() : 0);
         return hash;
     }
-
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
+        
         if (!(object instanceof Event)) {
             return false;
         }
@@ -156,7 +131,6 @@ public class Event implements Serializable {
         }
         return true;
     }
-
     @Override
     public String toString() {
         return "entities.Event[ eventId=" + eventId + " ]";

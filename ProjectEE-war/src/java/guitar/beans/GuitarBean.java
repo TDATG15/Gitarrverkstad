@@ -12,7 +12,6 @@ import javax.persistence.Lob;
 public class GuitarBean implements Serializable {
 
     
-    
     private Integer gid;
     private String model;
     private Integer price;

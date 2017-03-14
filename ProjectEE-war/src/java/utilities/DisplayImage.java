@@ -35,9 +35,7 @@ public class DisplayImage extends HttpServlet {
             Connection con = DriverManager.getConnection(url);
             con.setAutoCommit(false);
             stmt = con.createStatement();
-            
             String strSql = "select img from guitar where gid=" + Integer.parseInt(idString);
-            
             rs = stmt.executeQuery(strSql);
             
             if (rs.next()) {
@@ -61,10 +59,9 @@ public class DisplayImage extends HttpServlet {
             throws ServletException, IOException {
         
     }
-
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    }
 
 }
