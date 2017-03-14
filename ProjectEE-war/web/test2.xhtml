@@ -13,7 +13,7 @@
             <p:commandButton value="Boka" type="button" onclick="PF('eventDialog').show();" icon="ui-icon-star"/>
             <p:spacer height="50"> </p:spacer>
             <p:schedule value="#{scheduleView.lazyEventModel}" draggable="false" leftHeaderTemplate="next, today"
-            timeZone="GMT+1" showWeekends="false" rightHeaderTemplate=""/>
+                        timeZone="GMT+1" showWeekends="false" rightHeaderTemplate="" timeFormat=""/>
         </h:form>
             
         <h:form> 
@@ -22,7 +22,7 @@
                     <p:outputLabel for="custName" value="Name:" />
                     <p:inputText id="custName" value="#{consBean.custName}" required="true" /> 
                     <p:outputLabel for="conDate" value="Datumn:" />
-                    <p:calendar  id="conDate" value="#{consBean.conDate}"  pattern="dd/MM/yyyy"/>            
+                    <p:calendar  id="conDate" value="#{consBean.conDate}"  pattern="dd/MM/yyyy" mindate="today"/>            
                     <p:outputLabel for="conDate" value="Time:" />
                     <p:calendar id="conTime" value="#{consBean.conTime}" timeZone="GMT+1" pattern="HH:mm" timeOnly="true" 
                     readonlyInput="true" minHour="10" maxHour="10"/>            
@@ -34,5 +34,8 @@
             </p:dialog>    
         </h:form>
     </h:body>
+    <script>
+    today = Date();
+    </script>   
 </html>
 
