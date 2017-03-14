@@ -46,43 +46,43 @@
                 </p:column>
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="Id" />
+                        <h:outputText value="Id" style="float:left" />
                     </f:facet>
-                    <h:outputText value="#{item.gid}"/>
+                    <h:outputText value="#{item.gid}" style="float:left"/>
                 </p:column>
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="Model" />
+                        <h:outputText value="Model" style="float:left" />
                     </f:facet>
-                    <h:outputText value="#{item.model}"/>
+                    <h:outputText value="#{item.model}" style="float:left"/>
                 </p:column>
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="Pris" />
+                        <h:outputText value="Pris" style="float:left"/>
                     </f:facet>
-                    <h:outputText value="#{item.price}"/>
+                    <h:outputText value="#{item.price}" style="float:left"/>
                 </p:column>
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="Tillverkare" />
+                        <h:outputText value="Tillverkare" style="float:left"/>
                     </f:facet>
-                    <h:outputText value="#{item.manf}"/>
+                    <h:outputText value="#{item.manf}" style="float:left"/>
                 </p:column>
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="Beskrivning" />
+                        <h:outputText value="Beskrivning" style="center"/>
                     </f:facet>
-                    <h:outputText value="#{item.descr}"/>
+                    <h:outputText value="#{item.descr}" style="center"/>
                 </p:column>
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="Tidigare Ägare"/>
+                        <h:outputText value="Tidigare Ägare" style="float:left"/>
                     </f:facet>
-                    <h:outputText value="#{item.prvowner}"/>
+                    <h:outputText value="#{item.prvowner}" style="float:left"/>
                 </p:column>
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="Bild" />
+                        <h:outputText value="Bild" style="center"/>
                     </f:facet>
                     <h:outputLink value="DisplayImage?gid=#{item.gid}" target="_blank" >
                         <h:graphicImage value="DisplayImage?gid=#{item.gid}" width="50" height="50"></h:graphicImage>
