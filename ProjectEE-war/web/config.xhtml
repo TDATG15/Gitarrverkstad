@@ -43,6 +43,24 @@
                 </p:column>
                 <p:column>
                     <f:facet name="header">
+                        <h:outputText value="Tillverkare" />
+                    </f:facet>
+                    <h:outputText value="#{item.manf}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Beskrivning" />
+                    </f:facet>
+                    <h:outputText value="#{item.descr}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Tidigare Ägare"/>
+                    </f:facet>
+                    <h:outputText value="#{item.prvowner}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
                         <h:outputText value="Bild" />
                     </f:facet>
                     <h:outputLink value="DisplayImage?gid=#{item.gid}" target="_blank" >
