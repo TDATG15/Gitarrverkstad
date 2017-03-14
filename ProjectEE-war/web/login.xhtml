@@ -4,10 +4,35 @@
       xmlns:p="http://primefaces.org/ui"
       >
     <h:head>
+        <h:outputStylesheet name="/css/main.css"/>
+        <h:outputStylesheet name="/css/style.css"/>
         <title>Logga in</title>
     </h:head>
     <h:body>
-        <h:form id="loginForm">
+        		<div id="icon_block">
+            <ul>
+                <li><h:graphicImage library="images" name="icon.png"/></li> 
+                <li><h:outputText value="Anders Gitarrverkstad"/></li>
+            </ul>
+        </div>
+        <div id="top">
+			<div id="meny">
+				<div id="information">
+					<h:link value="Information" outcome="info.xhtml"/>
+				</div>
+				<div id="galleri">
+					<h:link value="Galleri" outcome="galleri.xhtml"/>
+				</div>
+				<div id="boka">
+					<h:link value="Boka en tid" outcome="bokningar.xhtml"/>
+				</div>	
+				<div id="hem">
+					<h:link value="Hem" outcome="index.xhtml"/>
+                                </div>
+                        </div>
+        </div>
+        <div>
+        <h:form id="loginForm" class="contentformat">
     
             <p:growl id="msg" showDetail="true" life="3000" />
             <p:panel header="Login" style="width: 480px;" >
@@ -30,6 +55,7 @@
             </p:panel>
  
         </h:form>
+        </div>
  
     </h:body> 
  

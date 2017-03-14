@@ -158,6 +158,10 @@
     display: inline-block;
 }
 
+.formHeader th{
+    background-color: #d97a1a;
+}
+
 #leftcontent {
     border-style: solid;
     float:left;
@@ -171,6 +175,14 @@
     padding: 5px;
     margin: 0px 170px 0px 200px; /* NORTH, EAST, SOUTH, WEST */
     
+}
+
+.cmdButtonLeft{
+    text-align:left;
+}
+
+.buttonColor{
+    background: #d97a1a;
 }
 
 .dontmesswithprevious{

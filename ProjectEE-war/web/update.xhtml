@@ -7,11 +7,36 @@
    xmlns:f="http://java.sun.com/jsf/core"
    >
     <h:head>
-        <title>Edit</title>
+        <h:outputStylesheet name="/css/main.css"/>
+        <h:outputStylesheet name="/css/style.css"/>
+        <title>Ändra en gitarr</title>
         
     </h:head>
     <h:body>
-            <h:form>  
+        		<div id="icon_block">
+            <ul>
+                <li><h:graphicImage library="images" name="icon.png"/></li> 
+                <li><h:outputText value="Anders Gitarrverkstad"/></li>
+            </ul>
+        </div>
+        <div id="top">
+			<div id="meny">
+				<div id="information">
+					<h:link value="Information" outcome="info.xhtml"/>
+				</div>
+				<div id="galleri">
+					<h:link value="Galleri" outcome="galleri.xhtml"/>
+				</div>
+				<div id="boka">
+					<h:link value="Boka en tid" outcome="bokningar.xhtml"/>
+				</div>	
+				<div id="hem">
+					<h:link value="Hem" outcome="index.xhtml"/>
+                                </div>
+                        </div>
+        </div>
+        <div>
+            <h:form id="editGuitar" class="contentformat">  
             <p:panelGrid columns="2">    
                 Model
                 <h:inputText value="#{guitarBean.model}"/>  
@@ -27,7 +52,8 @@
                     <h:commandButton value="Save"  action="#{crudBean.save()}"/>
                 </f:facet>    
             </p:panelGrid>
-        </h:form>      
+        </h:form>
+        </div>
         
     </h:body>
 </html>
