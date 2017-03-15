@@ -10,7 +10,8 @@ import org.primefaces.context.RequestContext;
 @Named(value = "userLoginBean")
 @ManagedBean
 public class UserLoginBean {
-
+    
+    FacesMessage message = null;
     private String username; 
     private String password;
     public String getUsername() {
@@ -27,7 +28,7 @@ public class UserLoginBean {
     }
     public String loginPr() {
         RequestContext context = RequestContext.getCurrentInstance();
-        FacesMessage message = null;
+        
         boolean loggedIn = false;
          
         if(username != null && username.equals("admin") && password != null && password.equals("admin")) {
