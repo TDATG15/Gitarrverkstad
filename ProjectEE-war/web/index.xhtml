@@ -22,7 +22,7 @@
 		
         <div id="icon_block">	
             <ul>
-                <li><h:graphicImage library="images" name="icon.png"/></li> 
+                <li><h:graphicImage library="images" name="icon.png" /></li> 
                 <li><h:outputText value="Anders Gitarrverkstad" styleClass="font"/></li>
             </ul>
         </div>
@@ -42,7 +42,9 @@
 					<h:link value="Hem" outcome="index.xhtml"/>
 				</div>
 				<div id="admin">
-					<h:link value="Admin" outcome="login.xhtml"/>
+					<h:link outcome="login.xhtml">
+						<h:graphicImage library="images" name="config.png" />
+					</h:link>
 				</div>
 			</div>
         </div>

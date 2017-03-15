@@ -37,6 +37,11 @@
     font-size: larger;
 }
 
+#admin img {
+	height: 20px;
+	width: auto;
+}
+
 #meny {
     width: 100%;
     overflow: hidden;
@@ -300,4 +305,8 @@
 
 .mapbild{
     
+}
+
+.themeColour {
+	color: #ffb66d;
 }
