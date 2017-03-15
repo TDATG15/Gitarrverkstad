@@ -36,7 +36,7 @@
         </div>
         <h:form enctype="multipart/form-data" class="contentformat"> 
             <p:growl id="messages" showDetail="true" />
-            <p:panelGrid columns="2">    
+            <p:panelGrid columns="2" style="auto">    
                 Model
                 <h:inputText value="#{addBean.model}"/>  
                 Pris
@@ -44,7 +44,8 @@
                 Tillverkare
                 <h:inputText value="#{addBean.manf}"/>
                 Beskrivning
-                <h:inputText value="#{addBean.descr}"/>
+                <h:inputTextarea value="#{addBean.descr}"/>
+ 
                 Tidigare ägare
                 <h:inputText value="#{addBean.prvowner}"/>
                 <h:outputLabel value="Välj en bild: *" />

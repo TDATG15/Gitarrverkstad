@@ -51,14 +51,14 @@
             </div>
             <!--<p:spacer height="50"> </p:spacer>-->
             <p:schedule value="#{scheduleView.lazyEventModel}" draggable="false" leftHeaderTemplate="next,today"
-                        timeZone="GMT+1" showWeekends="false" rightHeaderTemplate="" timeFormat=""/>
+                        timeZone="GMT+1" showWeekends="false" rightHeaderTemplate="" timeFormat="" locale="se" />
 
-            <p:dialog id="eventDialog" widgetVar="eventDialog" header="Event Details" resizable="false" showEffect="clip" hideEffect="clip">
+            <p:dialog id="eventDialog" widgetVar="eventDialog" header="Detaljer" resizable="false" showEffect="clip" hideEffect="clip">
                 <h:panelGrid id="eventDetails" columns="2">
                     <p:outputLabel for="custName" value="Name:" />
                     <p:inputText id="custName" value="#{consBean.custName}" required="true" /> 
                     <p:outputLabel for="conDate" value="Datum:" />
-                    <p:calendar  id="conDate" value="#{consBean.conDate}"  pattern="dd/MM/yyyy" mindate="today" required="true"/>            
+                    <p:calendar  id="conDate" value="#{consBean.conDate}"  pattern="dd/MM/yyyy" mindate="today" required="true" locale="se"/>            
                     <p:outputLabel for="conDate" value="Time:" />
                     <p:calendar id="conTime" value="#{consBean.conTime}" timeZone="GMT+1" pattern="HH:mm" timeOnly="true" 
                     readonlyInput="true" minHour="10" maxHour="10" minMinute="0" maxMinute="0"/>            
@@ -73,9 +73,31 @@
 			</div>    
 		</div>
 		
-		
-		
-		<style type="text/css">
+        <script type="text/javascript">
+     PrimeFaces.locales['se'] = {
+        closeText: 'stäng',
+        prevText: 'före',
+        nextText: 'nästa',
+        currentText: 'nuvarande',
+        monthNames: ['Januari','Februari','Mars','April','Maj','Juni',
+            'Juli','Augusti','September','Oktober','November','December'],
+        monthNamesShort: ['Jan','Feb','Mar','Apr','Maj','Jun',
+            'Jul','Aug','Sep','Okt','Nov','Dec'],
+        dayNames: ['Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag'],
+        dayNamesShort: ['sön', 'mån', 'tis', 'ons', 'tor', 'fre', 'lör'],
+        dayNamesMin: ['sö', 'må', 'ti', 'on', 'to', 'fr', 'lö'],
+        weekHeader: 'V',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: '',
+        month: 'Månad',
+        week: 'Vecka',
+        day: 'Dag',
+        allDayText : 'Hela dag'
+    };
+        </script>
+        <style type="text/css">
 			.value {
 				width: 1000px;
 			}
