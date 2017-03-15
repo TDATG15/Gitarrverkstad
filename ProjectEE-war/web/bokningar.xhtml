@@ -36,11 +36,16 @@
         </div>
          
 		<div> 
-                    <div id="left" class="left">
-                        Tryck på knappen "Boka" om
-                        du vill boka en konsultationstid.
-                        
-                        Konsultationstid kan bara bokas vid 10.
+                    <div id="center" class="boka">
+                        <ul>
+                            <li>
+                            <h:outputText value ="Trasig gitar? Tips? Boka en konsultation hos oss!"/>
+                        </li>
+                        <li>
+                            <h:outputText value="Vid felbokning ring oss på 070 777 11 77" />
+                        </li>
+                        </ul>
+                           
                     </div>
                    
 			<div id="center" class="contentformat">
@@ -49,6 +54,7 @@
             <div class="cmdButtonLeft">
             <p:commandButton value="Boka" type="button" onclick="PF('eventDialog').show();" icon="ui-icon-star" />
             </div>
+            
             <!--<p:spacer height="50"> </p:spacer>-->
             <p:schedule value="#{scheduleView.lazyEventModel}" draggable="false" leftHeaderTemplate="next,today"
                         timeZone="GMT+1" showWeekends="false" rightHeaderTemplate="" timeFormat="" locale="se" />
